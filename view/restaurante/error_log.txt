@@ -1,0 +1,5 @@
+[15-Apr-2014 23:43:57 UTC] PHP Fatal error:  Class 'CategoriaController' not found in D:\Servidor\htdocs\rango_map\view\restaurante\lista.php on line 20
+[16-Apr-2014 00:04:57 UTC] PHP Warning:  require_once(../../model/restaurate.class.php): failed to open stream: No such file or directory in D:\Servidor\htdocs\rango_map\view\restaurante\edita.php on line 15
+[16-Apr-2014 00:04:57 UTC] PHP Fatal error:  require_once(): Failed opening required '../../model/restaurate.class.php' (include_path='.;C:\php\pear') in D:\Servidor\htdocs\rango_map\view\restaurante\edita.php on line 15
+[16-Apr-2014 00:19:00 UTC] PHP Notice:  Undefined variable: categoria in D:\Servidor\htdocs\rango_map\view\restaurante\edita.php on line 35
+[16-Apr-2014 00:19:00 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\rango_map\view\restaurante\edita.php on line 35
