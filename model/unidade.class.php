@@ -87,5 +87,6 @@ class unidade {
     public function setIdRestaurante($id_restaurante) {
         $this->id_restaurante = $id_restaurante;
     }
+}
 
 ?>

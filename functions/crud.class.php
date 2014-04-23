@@ -1,7 +1,6 @@
 <?php 
 
 /**
-<<<<<<< HEAD
  *
  * Projeto : Tanbook
  * Projeto Interdisciplinar : UNIFeob - Fundação de Ensino Octávio Bastos

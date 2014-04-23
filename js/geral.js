@@ -21,19 +21,12 @@ function mostraConteudo(cod,tipo){
 		document.getElementById('btn_'+tipo+'_'+cod).title="-";
 		document.getElementById('btn_'+tipo+'_'+cod).innerHTML="<i class=\"icon-chevron-down\"></i>";
 		document.getElementById('conteudo_'+tipo+'_'+cod).style.display="";
-		if(tipo=="A"){
-			carregaCapitulos(cod);
-		}else{
-			carregaCategorias(cod);
-		}
+		carregaUnidades(cod);
+		
 	}else{
 		document.getElementById('btn_'+tipo+'_'+cod).title="+";
 		document.getElementById('conteudo_'+tipo+'_'+cod).style.display="none";
-		if(tipo=="A"){
-			document.getElementById('btn_'+tipo+'_'+cod).innerHTML="<i class=\"icon-list-alt\"></i>";
-		}else{
-			document.getElementById('btn_'+tipo+'_'+cod).innerHTML="<i class=\"icon-tags\"></i>";
-		}
+		document.getElementById('btn_'+tipo+'_'+cod).innerHTML="<i class=\"icon-list-alt\"></i>";		
 	}
 
 }
@@ -80,13 +73,13 @@ function carregaCategorias(codigo){
     }
 }
 
-function carregaCapitulos(codigo){
+function carregaUnidades(codigo){
 
 	document.getElementById('conteudo_A_'+codigo).style.display = "";
 	document.getElementById('conteudo_A_'+codigo).innerHTML = "Aguarde, pesquisando...!!!";	
 	
 	dadosDoFormulario = "id="+escape(codigo);
-	xmlhttp.open("POST", "../capitulo/lista.php?"+dadosDoFormulario, true);
+	xmlhttp.open("POST", "../unidade/lista.php?"+dadosDoFormulario, true);
 	xmlhttp.setRequestHeader('Content-Type','text/html');
 	xmlhttp.setRequestHeader('encoding','utf-8');
 	xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -108,7 +101,7 @@ function carregaCapitulos(codigo){
 			if (xmlhttp.status == 200){
 				//Resposta da Requisição
 				var aResposta = (xmlhttp.responseText);
-				//Insere a resposta da requisição dentro da tag com o ID selecionado
+				//Insere a resposta da requisição dentro da tag com o ID selecionado 	
 				document.getElementById('conteudo_A_'+codigo).innerHTML = aResposta;	
 			}else{
 				//Erro na resposta da requisição

@@ -141,6 +141,7 @@ if ($id > 0) {
 
                     <th style="text-align:center"><i class="icon-edit"></i></th>
                     <th style="text-align:center"><i class="icon-remove"></i></th>
+                    <th style="text-align:center"><i class="icon-list-alt"></i></th>
             </thead>
                 </tr>
             <tbody>
@@ -158,7 +159,10 @@ if ($id > 0) {
                     <td style="text-align:center"><?php echo $reg["site"]; ?></td>
                     <td style="text-align:center"><a class="btn btn-small" type="button" href="edita.php?id=<?php echo $reg["id"]; ?>"><i class="icon-edit"></i></a></td>
                     <td style="text-align:center"><a class="btn btn-small" type="button" onClick="return confirm('Deseja excluir mesmo')" href="lista.php?id=<?php echo $reg["id"]; ?>"><i class="icon-remove"></i></a></td>
+                    <td style="text-align:center"><a id="btn_A_<?php echo $reg['id']; ?>" class="btn btn-small" type="button" title="+" onClick="mostraConteudo('<?php echo $reg['id']; ?>', 'A')"><i class="icon-list-alt"></i></a></td>
                 </tr>
+
+                <td colspan="9" id="conteudo_A_<?php echo $reg['id']; ?>" style="height: 0px; display:none; border:0px none; background-color:#E5E5E5;"></td>
             
             	<?php
 					}
@@ -202,6 +206,7 @@ if ($id > 0) {
         <script src="../../js/bootstrap-collapse.js"></script>
         <script src="../../js/bootstrap-carousel.js"></script>
         <script src="../../js/bootstrap-typeahead.js"></script>
+        <script src="../../js/geral.js"></script>
     
 	</body>
 </html>
