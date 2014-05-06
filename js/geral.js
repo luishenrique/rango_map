@@ -15,13 +15,21 @@ try{
 }
 
 
-function mostraConteudo(cod,tipo){
+function mostraConteudo(cod,tipo,mostrar,aux){
 
 	if(document.getElementById('btn_'+tipo+'_'+cod).title=="+"){
 		document.getElementById('btn_'+tipo+'_'+cod).title="-";
 		document.getElementById('btn_'+tipo+'_'+cod).innerHTML="<i class=\"icon-chevron-down\"></i>";
 		document.getElementById('conteudo_'+tipo+'_'+cod).style.display="";
-		carregaUnidades(cod);
+
+		if (mostrar=='unidade'){
+			carregaUnidades(cod);	
+		}
+
+		if (mostrar=='cardapio'){
+			carregaCardapios(cod, aux);	
+		}
+		
 		
 	}else{
 		document.getElementById('btn_'+tipo+'_'+cod).title="+";
@@ -83,7 +91,7 @@ function carregaUnidades(codigo){
 	xmlhttp.setRequestHeader('Content-Type','text/html');
 	xmlhttp.setRequestHeader('encoding','utf-8');
 	xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-	xmlhttp.setRequestHeader('Content-length', dadosDoFormulario.lenght ); 
+	xmlhttp.setRequestHeader('Content-length', dadosDoFormulario.lenght );
 	xmlhttp.send(dadosDoFormulario);
 	xmlhttp.onreadystatechange=function() {
 
@@ -115,7 +123,49 @@ function carregaUnidades(codigo){
 }
 
 
-function editaHistoriaCategoria(campo,historia,categoria){
+function carregaCardapios(codigo, unidade){
+
+	document.getElementById('conteudo_B_'+codigo).style.display = "";
+	document.getElementById('conteudo_B_'+codigo).innerHTML = "Aguarde, pesquisando...!!!";	
+	
+	dadosDoFormulario = "id="+escape(codigo)+"&unidade="+escape(unidade);
+	xmlhttp.open("POST", "../cardapio/lista.php?"+dadosDoFormulario, true);
+	xmlhttp.setRequestHeader('Content-Type','text/html');
+	xmlhttp.setRequestHeader('encoding','utf-8');
+	xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xmlhttp.setRequestHeader('Content-length', dadosDoFormulario.lenght );
+	xmlhttp.send(dadosDoFormulario);
+	xmlhttp.onreadystatechange=function() {
+
+		/*
+		Verifica o estado do sistema
+		0: Requisição não inicializada
+		1: Conexão estabelecida com o servidor
+		2: Requisição recebida
+		3: Processando requisição 
+		4: Requisição finalizada e resposta lida
+		*/
+
+        if (xmlhttp.readyState==4){
+			//Recebe o código de retorno (100 a 500)
+			if (xmlhttp.status == 200){
+				//Resposta da Requisição
+				var aResposta = (xmlhttp.responseText);
+				//Insere a resposta da requisição dentro da tag com o ID selecionado 	
+				document.getElementById('conteudo_B_'+codigo).innerHTML = aResposta;	
+			}else{
+				//Erro na resposta da requisição
+				document.getElementById('conteudo_B_'+codigo).innerHTML = "Sua requisição não retornou um resultado válido.\nErro: "+xmlhttp.status;
+			}
+        }else{
+			//Carregando resposta da requisição
+			//alert("Carregando conteúdo");
+		}
+    }
+}
+
+
+function editaUnidadeCardapio(campo,unidade,cardapio){
 
 	if(campo.checked==true){
 		tipo = "S";
@@ -123,8 +173,8 @@ function editaHistoriaCategoria(campo,historia,categoria){
 		tipo = "R";
 	}
 
-	dadosDoFormulario = "historia="+escape(historia)+"&categoria="+escape(categoria)+"&tipo="+escape(tipo);
-	xmlhttp.open("POST", "../historiacategoria/edita.php?"+dadosDoFormulario, true);
+	dadosDoFormulario = "unidade="+escape(unidade)+"&cardapio="+escape(cardapio)+"&tipo="+escape(tipo);
+	xmlhttp.open("POST", "../unidade_cardapio/edita.php?"+dadosDoFormulario, true);
 	xmlhttp.setRequestHeader('Content-Type','text/html');
 	xmlhttp.setRequestHeader('encoding','utf-8');
 	xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -147,7 +197,7 @@ function editaHistoriaCategoria(campo,historia,categoria){
 				//Resposta da Requisição
 				var aResposta = (xmlhttp.responseText);
 				//Insere a resposta da requisição dentro da tag com o ID selecionado
-				//alert("Salvo");
+				//alert(aResposta);
 			}else{
 				//Erro na resposta da requisição
 				alert("Erro");

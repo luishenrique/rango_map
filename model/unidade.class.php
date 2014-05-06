@@ -18,7 +18,7 @@ class unidade {
     private $cidade;
     private $uf;
     private $telefone;
-    private $id_restaurante;
+    private $restaurante_id;
 
 	//Getters
 
@@ -50,8 +50,8 @@ class unidade {
     	return $this->telefone;
     }
 
-    public function getIdRestaurante(){
-    	return $this->id_restaurante;
+    public function getRestauranteId(){
+    	return $this->restaurante_id;
     }
 
 	//Setters
@@ -84,8 +84,8 @@ class unidade {
         $this->telefone = $telefone;
     }    
 
-    public function setIdRestaurante($id_restaurante) {
-        $this->id_restaurante = $id_restaurante;
+    public function setRestauranteId($restaurante_id) {
+        $this->restaurante_id = $restaurante_id;
     }
 }
 

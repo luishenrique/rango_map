@@ -20,9 +20,12 @@ class UnidadeController extends Crud {
     }
 
 	public function listObjectsGroup($where){
-		return $this->execute_query("SELECT * FROM restaurante LEFT JOIN unidade ON unidade.id_restaurante = restaurante.id AND unidade.id_restaurante = ".$where." ;");
+		return $this->execute_query("SELECT * FROM unidade WHERE restaurante_id = ".$where." ;");
 	}
 
+	public function selected( $value, $selected=NULL){
+    	return $value==$selected ? ' selected="selected"' : '';	
+	}
 }
 
 ?>

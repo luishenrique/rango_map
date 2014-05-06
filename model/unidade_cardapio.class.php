@@ -32,6 +32,8 @@ class unidade_cardapio {
 
     public function setCardapioId($cardapio_id) {
         $this->cardapio_id = $cardapio_id;
+    
     }
 
+}
 ?>

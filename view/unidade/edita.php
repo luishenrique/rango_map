@@ -31,7 +31,7 @@ if(isset($_POST['submit'])) {
   $unidade->setCidade($_POST['cidade']);
   $unidade->setUf($_POST['uf']);
   $unidade->setTelefone($_POST['telefone']);
-  $unidade->setIdRestaurante($_POST['id_restaurante']);
+  $unidade->setRestauranteId($_POST['restaurante_id']);
 
 	if($unidade->getId() > 0){
 		$controller->update($unidade, 'id');
@@ -39,15 +39,18 @@ if(isset($_POST['submit'])) {
 		$controller->save($unidade, 'id');
 	}
 
-	header('Location: lista.php');
+	header('Location: ../restaurante/lista.php');
 
 }
 
+
 if(isset($_GET["id"])){
-	$unidade = $controller->loadObject($_GET["id"], 'id');
+  $unidade = $controller->loadObject($_GET["id"], 'id');
 }
 
 //$categorias = $controller->listObjects();
+
+
 
 
 ?>
@@ -98,8 +101,8 @@ if(isset($_GET["id"])){
   <!-- Título -->
   <blockquote>
   
-    <h2>Gerenciamento de Restaurante</h2>
-    <small>Utilize o formulário abaixo para atualizar um Restaurante</small> </blockquote>
+    <h2>Gerenciamento de Unidade</h2>
+    <small>Utilize o formulário abaixo para atualizar uma Unidade </small> </blockquote>
 
   
   <!-- Mensagem de Retorno -->
@@ -109,7 +112,7 @@ if(isset($_GET["id"])){
   <section id="aviso">
     <?php
         	$functions->mensagemDeRetorno($_GET["tipo"],$_GET["acao"]);
-		?>
+		?>s
   </section>
   <?php
         }
@@ -118,13 +121,83 @@ if(isset($_GET["id"])){
     <input type="hidden" name="id" id="id" value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getId() : ''; ?>">
     <div class="control-group">
 
-          <input type="hidden" name="id" id="id" value="<?php echo ($unidade->getId() > 0 ) ? $restaurante->getId() : ''; ?>">
+          <input type="hidden" name="id" id="id" value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getId() : ''; ?>">
+          <input type="hidden" name="restaurante_id" id="restaurante_id" value="<?php echo ($unidade->getRestauranteId() > 0 ) ? $unidade->getRestauranteId() : $_GET["restauranteid"]; ?>">
+
     <div class="control-group">
-
-
-      <label class="control-label" for="nome_fantasia">Nome Fantasia</label>
+      <label class="control-label" for="rua">Rua</label>
       <div class="controls">
-        <input class="input-xlarge" type="text" name="nome_fantasia" id="nome_fantasia" required value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getRua() : ''; ?>">
+        <input class="input-xxlarge" type="text" name="rua" id="rua" required value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getRua() : ''; ?>">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="numero">Número</label>
+      <div class="controls">
+        <input class="input-small" type="text" name="numero" id="numero" required value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getNumero() : ''; ?>">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="bairro">Bairro</label>
+      <div class="controls">
+        <input class="input-xlarge" type="text" name="bairro" id="bairro" required value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getBairro() : ''; ?>">
+      </div>
+    </div>
+    
+    <div class="control-group">
+      <label class="control-label" for="cidade">Cidade</label>
+      <div class="controls">
+        <input class="input-xlarge" type="text" name="cidade" id="cidade" required value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getCidade() : ''; ?>">
+      </div>
+    </div>
+
+    <div class="control-group">
+          <label class="control-label" for="uf">UF</label>
+          <div class="controls">
+            <select id="uf" name="uf" class="input-medium">
+              <option value="">Selecione</option>             
+              <option value="AC" <?php echo $controller -> selected('AC', $unidade -> getUf()); ?>>AC</option>
+              <option value="AL" <?php echo $controller -> selected('AL', $unidade -> getUf()); ?>>AL</option>
+              <option value="AM" <?php echo $controller -> selected('AM', $unidade -> getUf()); ?>>AM</option>
+              <option value="AP" <?php echo $controller -> selected('AP', $unidade -> getUf()); ?>>AP</option>
+              <option value="BA" <?php echo $controller -> selected('BA', $unidade -> getUf()); ?>>BA</option>
+              <option value="CE" <?php echo $controller -> selected('CE', $unidade -> getUf()); ?>>CE</option>
+              <option value="DF" <?php echo $controller -> selected('DF', $unidade -> getUf()); ?>>DF</option>
+              <option value="ES" <?php echo $controller -> selected('ES', $unidade -> getUf()); ?>>ES</option>
+              <option value="GO" <?php echo $controller -> selected('GO', $unidade -> getUf()); ?>>GO</option>
+              <option value="MA" <?php echo $controller -> selected('MA', $unidade -> getUf()); ?>>MA</option>
+              <option value="MG" <?php echo $controller -> selected('MG', $unidade -> getUf()); ?>>MG</option>
+              <option value="MS" <?php echo $controller -> selected('MS', $unidade -> getUf()); ?>>MS</option>
+              <option value="MT" <?php echo $controller -> selected('MT', $unidade -> getUf()); ?>>MT</option>
+              <option value="PA" <?php echo $controller -> selected('PA', $unidade -> getUf()); ?>>PA</option>
+              <option value="PB" <?php echo $controller -> selected('PB', $unidade -> getUf()); ?>>PB</option>
+              <option value="PE" <?php echo $controller -> selected('PE', $unidade -> getUf()); ?>>PE</option>
+              <option value="PI" <?php echo $controller -> selected('PI', $unidade -> getUf()); ?>>PI</option>
+              <option value="PR" <?php echo $controller -> selected('PI', $unidade -> getUf()); ?>>PR</option>
+              <option value="RJ" <?php echo $controller -> selected('RJ', $unidade -> getUf()); ?>>RJ</option>
+              <option value="RN" <?php echo $controller -> selected('RN', $unidade -> getUf()); ?>>RN</option>
+              <option value="RO" <?php echo $controller -> selected('RO', $unidade -> getUf()); ?>>RO</option>
+              <option value="RR" <?php echo $controller -> selected('RR', $unidade -> getUf()); ?>>RR</option>
+              <option value="RS" <?php echo $controller -> selected('RS', $unidade -> getUf()); ?>>RS</option>
+              <option value="SC" <?php echo $controller -> selected('SC', $unidade -> getUf()); ?>>SC</option>
+              <option value="SE" <?php echo $controller -> selected('SE', $unidade -> getUf()); ?>>SE</option>
+              <option value="SP" <?php echo $controller -> selected('SP', $unidade -> getUf()); ?>>SP</option>
+              <option value="TO" <?php echo $controller -> selected('TO', $unidade -> getUf()); ?>>TO</option>
+            </select>
+          </div>
+        </div>
+
+    <div class="control-group">
+      <label class="control-label" for="telefone">Telefone</label>
+      <div class="controls">
+        <input class="input-xlarge" type="text" name="telefone" id="telefone" required value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getTelefone() : ''; ?>">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <input type="submit" class="btn btn-success btn-large" value="Salvar" name="submit">
       </div>
     </div>
 

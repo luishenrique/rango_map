@@ -19,7 +19,10 @@ $unidade	= new UnidadeController;
 $registros 	= $unidade->listObjectsGroup($_GET['id']);
 $tamanho	= mysql_num_rows($registros);
 
+
 ?>
+
+
 
 		<?php
         if($tamanho>0){
@@ -35,13 +38,19 @@ $tamanho	= mysql_num_rows($registros);
                     <th style="text-align:center">Cidade</th>
                     <th style="text-align:center">UF</th>
                     <th style="text-align:center">Telefone</th>
-                    <th><i class="icon-thumbs-up"></i></th>
+                    <th style="text-align:center"><i class="icon-th-list"></i></th>
+                    <th style="text-align:center"><i class="icon-certificate"></i></th>
+                    <th style="text-align:center"><i class="icon-tag"></i></th>
+                    <th style="text-align:center"><i class="icon-edit"></i></th>
+                    <th style="text-align:center"><i class="icon-remove"></i></th>
+                    
                 </tr>
             </thead>
             <tbody>
             
 				<?php
                 	while($reg = mysql_fetch_array($registros)){
+                        
 				?>
             
             	<tr>
@@ -52,8 +61,14 @@ $tamanho	= mysql_num_rows($registros);
                     <td style="text-align:center"><?php echo $reg["cidade"]; ?></td>
                     <td style="text-align:center"><?php echo $reg["uf"]; ?></td>
                     <td style="text-align:center"><?php echo $reg["telefone"]; ?></td>
-                    <td><label class="checkbox"><input type="checkbox" <?php if($_GET["id"]==$reg["historia_id"]){ echo "checked=\"checked\""; }?> onclick="editaHistoriaCategoria(this,'<?php echo $_GET["id"]; ?>','<?php echo $reg["id"]; ?>')"></label></td>
+                    <td style="text-align:center"><a id="btn_B_<?php echo $reg['id']; ?>" class="btn btn-small" type="button" title="+" onClick="mostraConteudo('<?php echo $reg['id']; ?>', 'B', 'cardapio', '<?php echo $reg["id"]; ?>')"><i class="icon-th-list"></i></a></td>                    
+                    <td style="text-align:center"><a class="btn btn-small" type="button" href="lista.php?id=<?php echo $reg["id"]; ?>"><i class="icon-certificate"></i></a></td>
+                    <td style="text-align:center"><a class="btn btn-small" type="button" href="lista.php?id=<?php echo $reg["id"]; ?>"><i class="icon-tag"></i></a></td>
+                    <td style="text-align:center"><a class="btn btn-small" type="button" href="../unidade/edita.php?id=<?php echo $reg['id']; ?>"><i class="icon-edit"></i></a></td>
+                    <td style="text-align:center"><a class="btn btn-small" type="button" onClick="return confirm('Deseja excluir mesmo')" href="../unidade/lista.php?id=<?php echo $reg["id"]; ?>"><i class="icon-remove"></i></a></td>
                 </tr>
+
+                <td colspan="12" id="conteudo_B_<?php echo $reg['id']; ?>" style="height: 0px; display:none; border:0px none; background-color:#CCCCCC;"></td>
 
             	<?php
 					}
@@ -76,6 +91,6 @@ $tamanho	= mysql_num_rows($registros);
 
          <div class="control-group">
             <div class="controls">
-              <a href="../unidade/edita.php?restauranteid=<?php echo $_GET['id']; ?>" class="btn btn-success btn-small">Cadastrar uma nova Unidade</a>
+              <a href="../unidade/edita.php?restauranteid=<?php echo $_GET['id']; ?>" class="btn btn btn-medium">Cadastrar uma nova Unidade</a>
             </div>
         </div>
