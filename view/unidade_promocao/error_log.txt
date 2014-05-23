@@ -1,0 +1,15 @@
+[13-May-2014 23:44:54 UTC] PHP Warning:  require_once(../../model/unidade_promocao.class.php): failed to open stream: No such file or directory in D:\Servidor\htdocs\rango_map\view\unidade_promocao\edita.php on line 16
+[13-May-2014 23:44:54 UTC] PHP Fatal error:  require_once(): Failed opening required '../../model/unidade_promocao.class.php' (include_path='.;C:\php\pear') in D:\Servidor\htdocs\rango_map\view\unidade_promocao\edita.php on line 16
+[13-May-2014 23:45:07 UTC] PHP Warning:  require_once(../../model/unidade_promocao.class.php): failed to open stream: No such file or directory in D:\Servidor\htdocs\rango_map\view\unidade_promocao\edita.php on line 16
+[13-May-2014 23:45:07 UTC] PHP Fatal error:  require_once(): Failed opening required '../../model/unidade_promocao.class.php' (include_path='.;C:\php\pear') in D:\Servidor\htdocs\rango_map\view\unidade_promocao\edita.php on line 16
+[13-May-2014 23:56:02 UTC] PHP Warning:  require_once(../../model/unidade_promocao.class.php): failed to open stream: No such file or directory in D:\Servidor\htdocs\rango_map\view\unidade_promocao\edita.php on line 16
+[13-May-2014 23:56:02 UTC] PHP Fatal error:  require_once(): Failed opening required '../../model/unidade_promocao.class.php' (include_path='.;C:\php\pear') in D:\Servidor\htdocs\rango_map\view\unidade_promocao\edita.php on line 16
+[13-May-2014 23:57:11 UTC] PHP Fatal error:  Cannot redeclare unidade_promocao::setUnidade_id() in D:\Servidor\htdocs\rango_map\model\unidade_promocao.class.php on line 35
+[13-May-2014 23:58:30 UTC] PHP Fatal error:  Cannot redeclare unidade_promocao::setUnidadeId() in D:\Servidor\htdocs\rango_map\model\unidade_promocao.class.php on line 35
+[13-May-2014 23:58:47 UTC] PHP Fatal error:  Cannot redeclare unidade_promocao::setUnidadeId() in D:\Servidor\htdocs\rango_map\model\unidade_promocao.class.php on line 35
+[13-May-2014 23:59:16 UTC] PHP Fatal error:  Class 'UnidadePromocao' not found in D:\Servidor\htdocs\rango_map\view\unidade_promocao\edita.php on line 18
+[13-May-2014 23:59:51 UTC] PHP Fatal error:  Call to undefined method UnidadePromocao::saveItem() in D:\Servidor\htdocs\rango_map\view\unidade_promocao\edita.php on line 23
+[13-May-2014 23:59:54 UTC] PHP Fatal error:  Call to undefined method UnidadePromocao::removeItem() in D:\Servidor\htdocs\rango_map\view\unidade_promocao\edita.php on line 21
+[16-May-2014 17:26:25 UTC] PHP Fatal error:  Call to undefined method UnidadePromocao::saveItem() in D:\Servidor\htdocs\rango_map\view\unidade_promocao\edita.php on line 23
+[16-May-2014 17:31:59 UTC] PHP Fatal error:  Call to undefined method UnidadePromocao::saveItem() in D:\Servidor\htdocs\rango_map\view\unidade_promocao\edita.php on line 23
+[16-May-2014 18:53:30 UTC] PHP Fatal error:  Call to undefined method UnidadePromocao::saveItem() in D:\Servidor\htdocs\rango_map\view\unidade_promocao\edita.php on line 23

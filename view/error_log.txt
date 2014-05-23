@@ -1,0 +1,4 @@
+[16-May-2014 17:19:42 UTC] PHP Warning:  require_once(../../controller/restaurante.controller.class.php): failed to open stream: No such file or directory in D:\Servidor\htdocs\rango_map\view\home.php on line 15
+[16-May-2014 17:19:42 UTC] PHP Fatal error:  require_once(): Failed opening required '../../controller/restaurante.controller.class.php' (include_path='.;C:\php\pear') in D:\Servidor\htdocs\rango_map\view\home.php on line 15
+[16-May-2014 17:20:13 UTC] PHP Notice:  Undefined variable: functions in D:\Servidor\htdocs\rango_map\view\home.php on line 54
+[16-May-2014 17:20:13 UTC] PHP Fatal error:  Call to a member function geraMenu() on a non-object in D:\Servidor\htdocs\rango_map\view\home.php on line 54

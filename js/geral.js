@@ -30,6 +30,13 @@ function mostraConteudo(cod,tipo,mostrar,aux){
 			carregaCardapios(cod, aux);	
 		}
 		
+		if (mostrar=='categoria'){
+			carregaCategorias(cod, aux);	
+		}
+
+		if (mostrar=='promocao'){
+			carregaPromocao(cod, aux);	
+		}
 		
 	}else{
 		document.getElementById('btn_'+tipo+'_'+cod).title="+";
@@ -40,17 +47,17 @@ function mostraConteudo(cod,tipo,mostrar,aux){
 }
 
 
-function carregaCategorias(codigo){
+function carregaPromocao(codigo, unidade){
 
-	document.getElementById('conteudo_B_'+codigo).style.display = "";
-	document.getElementById('conteudo_B_'+codigo).innerHTML = "Aguarde, pesquisando...!!!";	
+	document.getElementById('conteudo_D_'+codigo).style.display = "";
+	document.getElementById('conteudo_D_'+codigo).innerHTML = "Aguarde, pesquisando...!!!";	
 	
-	dadosDoFormulario = "id="+escape(codigo);
-	xmlhttp.open("POST", "../historiacategoria/lista.php?"+dadosDoFormulario, true);
+	dadosDoFormulario = "id="+escape(codigo)+"&unidade="+escape(unidade);
+	xmlhttp.open("POST", "../unidade_promocao/lista.php?"+dadosDoFormulario, true);
 	xmlhttp.setRequestHeader('Content-Type','text/html');
 	xmlhttp.setRequestHeader('encoding','utf-8');
 	xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-	xmlhttp.setRequestHeader('Content-length', dadosDoFormulario.lenght ); 
+	xmlhttp.setRequestHeader('Content-length', dadosDoFormulario.lenght );
 	xmlhttp.send(dadosDoFormulario);
 	xmlhttp.onreadystatechange=function() {
 
@@ -68,11 +75,53 @@ function carregaCategorias(codigo){
 			if (xmlhttp.status == 200){
 				//Resposta da Requisição
 				var aResposta = (xmlhttp.responseText);
-				//Insere a resposta da requisição dentro da tag com o ID selecionado
-				document.getElementById('conteudo_B_'+codigo).innerHTML = aResposta;	
+				//Insere a resposta da requisição dentro da tag com o ID selecionado 	
+				document.getElementById('conteudo_D_'+codigo).innerHTML = aResposta;	
 			}else{
 				//Erro na resposta da requisição
-				document.getElementById('conteudo_B_'+codigo).innerHTML = "Sua requisição não retornou um resultado válido.\nErro: "+xmlhttp.status;
+				document.getElementById('conteudo_D_'+codigo).innerHTML = "Sua requisição não retornou um resultado válido.\nErro: "+xmlhttp.status;
+			}
+        }else{
+			//Carregando resposta da requisição
+			//alert("Carregando conteúdo");
+		}
+    }
+}
+
+
+function carregaCategorias(codigo, unidade){
+
+	document.getElementById('conteudo_C_'+codigo).style.display = "";
+	document.getElementById('conteudo_C_'+codigo).innerHTML = "Aguarde, pesquisando...!!!";	
+	
+	dadosDoFormulario = "id="+escape(codigo)+"&unidade="+escape(unidade);
+	xmlhttp.open("POST", "../unidade_categoria/lista.php?"+dadosDoFormulario, true);
+	xmlhttp.setRequestHeader('Content-Type','text/html');
+	xmlhttp.setRequestHeader('encoding','utf-8');
+	xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xmlhttp.setRequestHeader('Content-length', dadosDoFormulario.lenght );
+	xmlhttp.send(dadosDoFormulario);
+	xmlhttp.onreadystatechange=function() {
+
+		/*
+		Verifica o estado do sistema
+		0: Requisição não inicializada
+		1: Conexão estabelecida com o servidor
+		2: Requisição recebida
+		3: Processando requisição 
+		4: Requisição finalizada e resposta lida
+		*/
+
+        if (xmlhttp.readyState==4){
+			//Recebe o código de retorno (100 a 500)
+			if (xmlhttp.status == 200){
+				//Resposta da Requisição
+				var aResposta = (xmlhttp.responseText);
+				//Insere a resposta da requisição dentro da tag com o ID selecionado 	
+				document.getElementById('conteudo_C_'+codigo).innerHTML = aResposta;	
+			}else{
+				//Erro na resposta da requisição
+				document.getElementById('conteudo_C_'+codigo).innerHTML = "Sua requisição não retornou um resultado válido.\nErro: "+xmlhttp.status;
 			}
         }else{
 			//Carregando resposta da requisição
@@ -129,7 +178,7 @@ function carregaCardapios(codigo, unidade){
 	document.getElementById('conteudo_B_'+codigo).innerHTML = "Aguarde, pesquisando...!!!";	
 	
 	dadosDoFormulario = "id="+escape(codigo)+"&unidade="+escape(unidade);
-	xmlhttp.open("POST", "../cardapio/lista.php?"+dadosDoFormulario, true);
+	xmlhttp.open("POST", "../unidade_cardapio/lista.php?"+dadosDoFormulario, true);
 	xmlhttp.setRequestHeader('Content-Type','text/html');
 	xmlhttp.setRequestHeader('encoding','utf-8');
 	xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -209,12 +258,16 @@ function editaUnidadeCardapio(campo,unidade,cardapio){
     }
 }
 
+function editaUnidadeCategoria(campo,unidade,categoria){
 
+	if(campo.checked==true){
+		tipo = "S";
+	}else{
+		tipo = "R";
+	}
 
-function salvaCapitulo(texto,ordem,tangram,historia){
-
-	dadosDoFormulario = "historia="+escape(historia)+"&tangram="+escape(tangram)+"&ordem="+escape(ordem)+"&texto="+escape(texto);
-	xmlhttp.open("POST", "../capitulo/edita.php?"+dadosDoFormulario, true);
+	dadosDoFormulario = "unidade="+escape(unidade)+"&categoria="+escape(categoria)+"&tipo="+escape(tipo);
+	xmlhttp.open("POST", "../unidade_categoria/edita.php?"+dadosDoFormulario, true);
 	xmlhttp.setRequestHeader('Content-Type','text/html');
 	xmlhttp.setRequestHeader('encoding','utf-8');
 	xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -238,7 +291,6 @@ function salvaCapitulo(texto,ordem,tangram,historia){
 				var aResposta = (xmlhttp.responseText);
 				//Insere a resposta da requisição dentro da tag com o ID selecionado
 				//alert(aResposta);
-				carregaCapitulos(historia);
 			}else{
 				//Erro na resposta da requisição
 				alert("Erro");
@@ -250,17 +302,16 @@ function salvaCapitulo(texto,ordem,tangram,historia){
     }
 }
 
+function editaUnidadePromocao(campo,unidade,promocao){
 
-function compartilharHistoria(historia,campo){
-	
-	if(campo.checked == true){
-		valor = 1;
+	if(campo.checked==true){
+		tipo = "S";
 	}else{
-		valor = 0;
+		tipo = "R";
 	}
 
-	dadosDoFormulario = "historia="+escape(historia)+"&valor="+escape(valor);
-	xmlhttp.open("POST", "compartilha.php?"+dadosDoFormulario, true);
+	dadosDoFormulario = "unidade="+escape(unidade)+"&promocao="+escape(promocao)+"&tipo="+escape(tipo);
+	xmlhttp.open("POST", "../unidade_promocao/edita.php?"+dadosDoFormulario, true);
 	xmlhttp.setRequestHeader('Content-Type','text/html');
 	xmlhttp.setRequestHeader('encoding','utf-8');
 	xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');

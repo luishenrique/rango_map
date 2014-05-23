@@ -3,3 +3,27 @@
 [16-Apr-2014 00:04:57 UTC] PHP Fatal error:  require_once(): Failed opening required '../../model/restaurate.class.php' (include_path='.;C:\php\pear') in D:\Servidor\htdocs\rango_map\view\restaurante\edita.php on line 15
 [16-Apr-2014 00:19:00 UTC] PHP Notice:  Undefined variable: categoria in D:\Servidor\htdocs\rango_map\view\restaurante\edita.php on line 35
 [16-Apr-2014 00:19:00 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\rango_map\view\restaurante\edita.php on line 35
+[21-May-2014 01:08:40 UTC] PHP Notice:  Undefined index: latitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 216
+[21-May-2014 01:08:40 UTC] PHP Notice:  Undefined index: longitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 217
+[21-May-2014 01:10:53 UTC] PHP Notice:  Undefined index: latitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 224
+[21-May-2014 01:10:53 UTC] PHP Notice:  Undefined index: longitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 225
+[21-May-2014 01:11:00 UTC] PHP Notice:  Undefined index: latitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 224
+[21-May-2014 01:11:00 UTC] PHP Notice:  Undefined index: longitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 225
+[21-May-2014 01:16:57 UTC] PHP Notice:  Undefined index: latitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 216
+[21-May-2014 01:16:57 UTC] PHP Notice:  Undefined index: longitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 217
+[21-May-2014 01:19:40 UTC] PHP Notice:  Undefined index: latitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 216
+[21-May-2014 01:19:40 UTC] PHP Notice:  Undefined index: longitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 217
+[21-May-2014 01:20:37 UTC] PHP Notice:  Undefined index: latitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 216
+[21-May-2014 01:20:37 UTC] PHP Notice:  Undefined index: longitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 217
+[21-May-2014 01:21:58 UTC] PHP Notice:  Undefined index: latitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 216
+[21-May-2014 01:21:58 UTC] PHP Notice:  Undefined index: longitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 217
+[21-May-2014 01:22:04 UTC] PHP Notice:  Undefined index: latitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 216
+[21-May-2014 01:22:04 UTC] PHP Notice:  Undefined index: longitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 217
+[21-May-2014 01:22:34 UTC] PHP Notice:  Undefined index: latitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 216
+[21-May-2014 01:22:34 UTC] PHP Notice:  Undefined index: longitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 217
+[21-May-2014 01:23:34 UTC] PHP Notice:  Undefined index: latitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 219
+[21-May-2014 01:23:34 UTC] PHP Notice:  Undefined index: longitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 220
+[21-May-2014 01:25:31 UTC] PHP Notice:  Undefined index: latitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 219
+[21-May-2014 01:25:31 UTC] PHP Notice:  Undefined index: longitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 220
+[22-May-2014 23:23:33 UTC] PHP Notice:  Undefined index: latitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 219
+[22-May-2014 23:23:33 UTC] PHP Notice:  Undefined index: longitude in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 220

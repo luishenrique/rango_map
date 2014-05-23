@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
@@ -6,43 +6,39 @@ error_reporting(E_ALL);
 
 /*
  * 	Descrição do Arquivo
- * 	@author - Luis Henrique Rodrigues
- * 	@data de criação - 01/04/2014
+ * 	@author - Marcus Vincicius
+ * 	@data de criação - 08/04/2014
  * 	@arquivo  - edita.php
  */
  
-require_once("../../controller/categoria.controller.class.php");
-require_once("../../model/categoria.class.php");
+require_once("../../controller/cardapio.controller.class.php");
+require_once("../../model/cardapio.class.php");
 
 include_once("../../functions/functions.class.php");
 
 session_start();
 
-$controller = new CategoriaController();
-$categoria = new categoria();
+$controller = new CardapioController();
+$cardapio 	= new cardapio();
 $functions	= new Functions;
 
 if(isset($_POST['submit'])) {
 
-	$categoria->setId($_POST['id']);
-  $categoria->setDescricao($_POST['descricao']);
+	$cardapio->setId($_POST['id']);
+	$cardapio->setCategoria($_POST['categoria']);
 
-
-	if($categoria->getId() > 0){
-		$controller->update($categoria, 'id');
+	if($cardapio->getId() > 0){
+		$controller->update($cardapio, 'id');
 	}else{
-		$controller->save($categoria, 'id');
+		$controller->save($cardapio, 'id');
 	}
-
-	header('Location: ../home.php');
-
+	header('Location: lista.php');
 }
+
 
 if(isset($_GET["id"])){
-	$categoria = $controller->loadObject($_GET["id"], 'id');
+	$cardapio = $controller->loadObject($_GET["id"], 'id');
 }
-
-//$categorias = $controller->listObjects();
 
 
 ?>
@@ -74,14 +70,11 @@ if(isset($_GET["id"])){
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
-        <span class="icon-bar"></span> 
-        <span class="icon-bar"></span> 
-        <span class="icon-bar"></span> </button>
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <img class="brand" src="../../img/assinatura_tanbook.png" alt="" style="width:200px;">
       <div class="nav-collapse collapse">
         <?php
-            $functions->geraMenu();
+                $functions->geraMenu();
             ?>
       </div>
       <!--/.nav-collapse --> 
@@ -93,8 +86,8 @@ if(isset($_GET["id"])){
   <!-- Título -->
   <blockquote>
   
-    <h2>Gerenciamento de Categoria</h2>
-    <small>Utilize o formulário abaixo para atualizar a categoria</small> </blockquote>
+    <h2>Gerenciamento de Cardapios</h2>
+    <small>Utilize o formulário abaixo para atualizar os cardapios</small> </blockquote>
 
   
   <!-- Mensagem de Retorno -->
@@ -108,22 +101,24 @@ if(isset($_GET["id"])){
   </section>
   <?php
         }
-   ?>
+        ?>
   <form class="form-horizontal" id="contact-form" action="edita.php" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="id" id="id" value="<?php echo ($categoria->getId() > 0 ) ? $categoria->getId() : ''; ?>">
+   
+    <input type="hidden" name="id" id="id" value="<?php echo ($cardapio->getId() > 0 ) ? $cardapio->getId() : ''; ?>">
+
     <div class="control-group">
-      <label class="control-label" for="nome">Descrição</label>
+      <label class="control-label" for="categoria">Categoria</label>
       <div class="controls">
-        <input class="input-xlarge" type="text" name="descricao" id="descricao" required value="<?php echo ($categoria->getId() > 0 ) ? $categoria->getDescricao() : ''; ?>">
+        <input class="input-xlarge" style="height: 30px" type="text" name="categoria" id="categoria" required value="<?php echo ($cardapio->getId() > 0 ) ? $cardapio->getCategoria() : ''; ?>">
       </div>
     </div>
-
-    
+  
     <div class="control-group">
       <div class="controls">
         <input type="submit" class="btn btn-success btn-large" value="Salvar" name="submit">
       </div>
     </div>
+
   </form>
   <hr>
   <footer>
@@ -149,39 +144,6 @@ if(isset($_GET["id"])){
 <script src="../../js/bootstrap-carousel.js"></script> 
 <script src="../../js/bootstrap-typeahead.js"></script> 
 
-		<script>
-        $(document).ready(function(){
-         
-         $('#contact-form').validate(
-         {
-          rules: {
-            nome: {
-              required: true
-            },
-            email: {
-              required: true,
-            },
-            dataNascimento: {
-              required: true,
-            },
-            apelido: {
-              required: true,
-            },
-            senha: {
-              required: true,
-            }
-          },
-          highlight: function(element) {
-            $(element).closest('.control-group').removeClass('success').addClass('error');
-          },
-          success: function(element) {
-            element
-            .text('OK!').addClass('valid')
-            .closest('.control-group').removeClass('error').addClass('success');
-          }
-         });
-        });
-        </script>
 
 </body>
 </html>

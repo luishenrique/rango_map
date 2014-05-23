@@ -32,6 +32,8 @@ if(isset($_POST['submit'])) {
   $unidade->setUf($_POST['uf']);
   $unidade->setTelefone($_POST['telefone']);
   $unidade->setRestauranteId($_POST['restaurante_id']);
+  $unidade->setLongitude($_POST['longitude']);
+  $unidade->setLatitude($_POST['latitude']);
 
 	if($unidade->getId() > 0){
 		$controller->update($unidade, 'id');
@@ -49,10 +51,6 @@ if(isset($_GET["id"])){
 }
 
 //$categorias = $controller->listObjects();
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -82,14 +80,11 @@ if(isset($_GET["id"])){
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
-        <span class="icon-bar"></span> 
-        <span class="icon-bar"></span> 
-        <span class="icon-bar"></span> </button>
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <img class="brand" src="../../img/assinatura_tanbook.png" alt="" style="width:200px;">
       <div class="nav-collapse collapse">
         <?php
-            $functions->geraMenu();
+                $functions->geraMenu();
             ?>
       </div>
       <!--/.nav-collapse --> 
@@ -112,15 +107,14 @@ if(isset($_GET["id"])){
   <section id="aviso">
     <?php
         	$functions->mensagemDeRetorno($_GET["tipo"],$_GET["acao"]);
-		?>s
+		?>
   </section>
   <?php
         }
    ?>
-  <form class="form-horizontal" id="contact-form" action="edita.php" method="post" enctype="multipart/form-data">
+  <form class="form-horizontal" id="form" name="form" action="edita.php" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id" id="id" value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getId() : ''; ?>">
     <div class="control-group">
-
           <input type="hidden" name="id" id="id" value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getId() : ''; ?>">
           <input type="hidden" name="restaurante_id" id="restaurante_id" value="<?php echo ($unidade->getRestauranteId() > 0 ) ? $unidade->getRestauranteId() : $_GET["restauranteid"]; ?>">
 
@@ -195,6 +189,27 @@ if(isset($_GET["id"])){
       </div>
     </div>
 
+
+     <div class="control-group">
+      <div class="controls">
+        <input type="button" onClick="codeAddress(EnderecoCompleto());" class="btn btn btn-medium" value="Encontrar Localização" name="submit">
+      </div>
+    </div>
+
+     <div class="control-group">
+      <label class="control-label" for="latitude">Latitude</label>
+      <div class="controls">
+        <input class="input-xlarge" type="text" name="latitude" id="latitude" required value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getLatitude() : ''; ?>">
+      </div>
+    </div>
+
+     <div class="control-group">
+      <label class="control-label" for="longitude">Longitude</label>
+      <div class="controls">
+        <input class="input-xlarge" type="text" name="longitude" id="longitude" required value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getLongitude() : ''; ?>">
+      </div>
+    </div>
+
     <div class="control-group">
       <div class="controls">
         <input type="submit" class="btn btn-success btn-large" value="Salvar" name="submit">
@@ -226,11 +241,46 @@ if(isset($_GET["id"])){
 <script src="../../js/bootstrap-collapse.js"></script> 
 <script src="../../js/bootstrap-carousel.js"></script> 
 <script src="../../js/bootstrap-typeahead.js"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places&key=AIzaSyA5bgsvBQR3j7uUPNKJGjFWRtllRJ-1P9E"></script>
 
-		<script>
+		    <script>
+
+        function EnderecoCompleto(){
+            rua = document.form.rua.value;
+            numero = document.form.numero.value;
+            cidade = document.form.cidade.value;
+            estado = document.form.uf.value;
+            pais = "Brasil";
+            endereco = rua + ", " + numero  + ", " + cidade  + ", " + estado  + ", " + pais;
+            return(endereco);
+        }
+
+        function codeAddress(address) {
+
+          geocoder = new google.maps.Geocoder();          
+          geocoder.geocode( { 'address': address }, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+
+            //alert("Latitude: "+results[0].geometry.location.lat());
+            //alert("Longitude: "+results[0].geometry.location.lng());
+
+            document.getElementById('latitude').value = results[0].geometry.location.lat();
+            document.getElementById('longitude').value = results[0].geometry.location.lng();
+
+            
+            
+            } 
+
+            else {
+              alert("Geocode was not successful for the following reason: " + status);
+            }
+          });
+  }
+
+
         $(document).ready(function(){
          
-         $('#contact-form').validate(
+         $('#form').validate(
          {
           rules: {
             site: {
@@ -248,6 +298,8 @@ if(isset($_GET["id"])){
          });
         });
         </script>
+
+    
 
 </body>
 </html>

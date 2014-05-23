@@ -19,8 +19,8 @@ class UnidadeController extends Crud {
         parent::__construct("unidade");
     }
 
-	public function listObjectsGroup($where){
-		return $this->execute_query("SELECT * FROM unidade WHERE restaurante_id = ".$where." ;");
+	public function listObjectsGroup($where=NULL){
+		return $this->execute_query("SELECT * FROM unidade ;");
 	}
 
 	public function selected( $value, $selected=NULL){

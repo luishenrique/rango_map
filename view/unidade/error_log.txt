@@ -87,3 +87,6 @@
 [26-Apr-2014 17:45:04 UTC] PHP Notice:  Undefined index: id in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 19
 [26-Apr-2014 17:45:10 UTC] PHP Notice:  Undefined index: id in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 19
 [29-Apr-2014 23:27:44 UTC] PHP Notice:  Undefined index: id in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 19
+[10-May-2014 18:40:21 UTC] PHP Notice:  Use of undefined constant d - assumed 'd' in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 54
+[13-May-2014 00:21:17 UTC] PHP Notice:  Undefined index: id in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 19
+[13-May-2014 00:21:20 UTC] PHP Notice:  Undefined index: id in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 19

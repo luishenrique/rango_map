@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
@@ -6,22 +6,22 @@ ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
 error_reporting(E_ALL);
 
 /*
- * 	Descrição do Arquivo
- * 	@author - Luis Henrique Rodrigues
- * 	@data de criação - 09/04/2014
+ * 	categoria do Arquivo
+ * 	@author - João Ricardo Gomes dos Reis
+ * 	@data de criação - 08/04/2014
  * 	@arquivo  - lista.php
  */
  
-require_once("../../controller/unidade_categoria.controller.class.php");
+//require_once("../../controller/cardapio.controller.class.php");
+require_once("../../controller/unidade_cardapio.controller.class.php");
 
 include_once("../../functions/functions.class.php");
 
-$categoria 	= new UnidadeCategoria;
-if (isset($_GET['unidade'])){
-    $registros 	= $categoria->lista($_GET['unidade']);
-}
+$cardapio 	= new UnidadeCardapio;
+$registros 	= $cardapio->lista($_GET['unidade']);
 
 $functions	= new Functions;
+
 
 $id = ( isset($_GET['id']) ) ? $_GET['id'] : 0;
 
@@ -30,24 +30,26 @@ $id = ( isset($_GET['id']) ) ? $_GET['id'] : 0;
 <!DOCTYPE html>
 <html>
 
+
 	<body>
 
+    
     <div class="container">
+       
 
-		
 		<?php
-        if(isset($registros)){
+        if($registros){
 		?>
         <!-- Lista -->
-        <table class="table table-hover" style="margin: 0px; padding: 0px;">
+        <table class="table table-hover"  style="margin: 0px; padding: 0px;">
 			<thead>
             	<tr>
                     <th>Código</th>
                     <th>Categoria</th>
                     <th><i class="icon-edit"></i></th>
-
-            </thead>
+                    
                 </tr>
+            </thead>
             <tbody>
             
 				<?php
@@ -56,13 +58,10 @@ $id = ( isset($_GET['id']) ) ? $_GET['id'] : 0;
             
             	<tr>
                     <td><?php echo $reg["id"]; ?></td>
-                    <td><?php echo $reg["descricao"]; ?></td>
-                    <td><label class="checkbox"><input type="checkbox" <?php if($_GET["unidade"]==$reg['unidade_id']) { echo "checked=\"checked\"";}?> 
-                        onclick="editaUnidadeCategoria(this, '<?php echo $_GET["unidade"]; ?>' ,'<?php echo $reg["id"]; ?>')"></label></td>
+                    <td><?php echo $reg["categoria"]; ?></td>
+                    <td><label class="checkbox"><input type="checkbox" <?php if($_GET["unidade"]==$reg['unidade_id']) { echo "checked=\"checked\"";}?> onclick="editaUnidadeCardapio(this, '<?php echo $_GET["unidade"]; ?>' ,'<?php echo $reg["id"]; ?>')"></label></td>
+                    
                 </tr>
-
-
-
             
             	<?php
 					}
@@ -76,15 +75,22 @@ $id = ( isset($_GET['id']) ) ? $_GET['id'] : 0;
 		?>
         	<div class="text-center">
                 <h2>Opsss!!!</h2>
-                <p>Não foi encontrado nenhuma categoria</p>
+                <p>Não foi encontrado nenhum cardápio</p>
             </div>
         
         <?php
 		}
 		?>
 
+        <br>
+        
+        <div class="control-group">
+            <div class="controls">
+              <a href="../cardapio/edita.php?restauranteid=<?php echo $_GET['id']; ?>" class="btn btn btn-medium">Cadastrar um novo item no Cardápio</a>
+            </div>
+        </div>
 
-
+       
 
     </div> <!-- /container -->
 

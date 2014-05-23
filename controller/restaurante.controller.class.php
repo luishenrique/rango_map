@@ -19,7 +19,6 @@ class RestauranteController extends Crud {
         parent::__construct("restaurante");
     }
 
-
 }
 
 ?>

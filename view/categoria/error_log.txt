@@ -1,0 +1,4 @@
+[16-May-2014 17:13:11 UTC] PHP Notice:  Undefined index: unidade in D:\Servidor\htdocs\rango_map\view\categoria\lista.php on line 20
+[16-May-2014 17:14:34 UTC] PHP Notice:  Undefined index: unidade in D:\Servidor\htdocs\rango_map\view\categoria\lista.php on line 20
+[16-May-2014 17:14:34 UTC] PHP Notice:  Undefined variable: registros in D:\Servidor\htdocs\rango_map\view\categoria\lista.php on line 39
+[16-May-2014 17:15:28 UTC] PHP Notice:  Undefined variable: registros in D:\Servidor\htdocs\rango_map\view\categoria\lista.php on line 39

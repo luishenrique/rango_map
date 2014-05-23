@@ -74,12 +74,20 @@ class Functions {
 						<ul class=\"nav\" style=\"bottom:15px;\">
 						  <li><a href=\"".$contextoDeMenu."/view/home.php\">Home</a></li>
 						  <li class=\"dropdown\">
+							<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Administração<b class=\"caret\"></b></a>
+							<ul class=\"dropdown-menu\">
+							  <li><a href=\"".$contextoDeMenu."/view/restaurante/lista.php\"><i class=\"icon-user\"></i> Restaurantes</a></li>
+							  <li><a href=\"".$contextoDeMenu."/view/usuario/lista.php\"><i class=\"icon-user\"></i> Usuarios</a></li>
+							</ul>
+						  </li>
+
+							<li class=\"dropdown\">
 							<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">RangoMap<b class=\"caret\"></b></a>
 							<ul class=\"dropdown-menu\">
 							  <li><a href=\"".$contextoDeMenu."/view/usuario/edita.php\"><i class=\"icon-user\"></i> Gerenciar Conta</a></li>
 							  <li><a href=\"".$contextoDeMenu."/view/usuario/logoff.php?confirma=NAO\"><i class=\"icon-share\"></i> Efetuar Logoff</a></li>
 							</ul>
-						  </li>
+
 						   <li><a href=\"".$contextoDeMenu."/sobre.php\">Sobre</a></li>
 						</ul>				
 						";

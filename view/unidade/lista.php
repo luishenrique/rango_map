@@ -61,14 +61,20 @@ $tamanho	= mysql_num_rows($registros);
                     <td style="text-align:center"><?php echo $reg["cidade"]; ?></td>
                     <td style="text-align:center"><?php echo $reg["uf"]; ?></td>
                     <td style="text-align:center"><?php echo $reg["telefone"]; ?></td>
-                    <td style="text-align:center"><a id="btn_B_<?php echo $reg['id']; ?>" class="btn btn-small" type="button" title="+" onClick="mostraConteudo('<?php echo $reg['id']; ?>', 'B', 'cardapio', '<?php echo $reg["id"]; ?>')"><i class="icon-th-list"></i></a></td>                    
-                    <td style="text-align:center"><a class="btn btn-small" type="button" href="lista.php?id=<?php echo $reg["id"]; ?>"><i class="icon-certificate"></i></a></td>
-                    <td style="text-align:center"><a class="btn btn-small" type="button" href="lista.php?id=<?php echo $reg["id"]; ?>"><i class="icon-tag"></i></a></td>
+                    <td style="text-align:center"><a id="btn_B_<?php echo $reg['id']; ?>" class="btn btn-small" type="button" title="+" 
+                        onClick="mostraConteudo('<?php echo $reg['id']; ?>', 'B', 'cardapio', '<?php echo $reg["id"]; ?>')"><i class="icon-th-list"></i></a></td>                    
+                    <td style="text-align:center"><a id="btn_D_<?php echo $reg['id']; ?>" class="btn btn-small" type="button" title="+" 
+                        onClick="mostraConteudo('<?php echo $reg['id']; ?>', 'D', 'promocao', '<?php echo $reg["id"]; ?>')"><i class="icon-certificate"></i></a></td>
+                    <td style="text-align:center"><a id="btn_C_<?php echo $reg['id']; ?>" class="btn btn-small" type="button" title="+" 
+                        onClick="mostraConteudo('<?php echo $reg['id']; ?>', 'C', 'categoria', '<?php echo $reg["id"]; ?>')"><i class="icon-tag"></i></a></td>
                     <td style="text-align:center"><a class="btn btn-small" type="button" href="../unidade/edita.php?id=<?php echo $reg['id']; ?>"><i class="icon-edit"></i></a></td>
                     <td style="text-align:center"><a class="btn btn-small" type="button" onClick="return confirm('Deseja excluir mesmo')" href="../unidade/lista.php?id=<?php echo $reg["id"]; ?>"><i class="icon-remove"></i></a></td>
                 </tr>
 
-                <td colspan="12" id="conteudo_B_<?php echo $reg['id']; ?>" style="height: 0px; display:none; border:0px none; background-color:#CCCCCC;"></td>
+                <tr><td colspan="12" id="conteudo_B_<?php echo $reg['id']; ?>" style="height: 0px; display:none; border:0px none; background-color:#CCC;"></td></tr>
+                <tr><td colspan="12" id="conteudo_C_<?php echo $reg['id']; ?>" style="height: 0px; display:none; border:0px none; background-color:#CCC;"></td></tr>
+                <tr><td colspan="12" id="conteudo_D_<?php echo $reg['id']; ?>" style="height: 0px; display:none; border:0px none; background-color:#CCC;"></td></tr>
+               
 
             	<?php
 					}

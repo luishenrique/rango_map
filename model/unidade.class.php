@@ -19,6 +19,8 @@ class unidade {
     private $uf;
     private $telefone;
     private $restaurante_id;
+    private $latitude;
+    private $longitude;
 
 	//Getters
 
@@ -52,6 +54,14 @@ class unidade {
 
     public function getRestauranteId(){
     	return $this->restaurante_id;
+    }
+	
+    public function getLatitude(){
+    	return $this->latitude;
+    }
+
+    public function getLongitude(){
+    	return $this->longitude;
     }
 
 	//Setters
@@ -87,6 +97,15 @@ class unidade {
     public function setRestauranteId($restaurante_id) {
         $this->restaurante_id = $restaurante_id;
     }
+	
+	public function setLatitude($latitude) {
+        $this->latitude = $latitude;
+    }    
+
+    public function setLongitude($longitude) {
+        $this->longitude = $longitude;
+    }
+	
 }
 
 ?>
