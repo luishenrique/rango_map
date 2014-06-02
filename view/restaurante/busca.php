@@ -7,9 +7,9 @@ error_reporting(E_ALL);
 
 /*
  * 	Descrição do Arquivo
- * 	@author - João Ricardo Gomes dos Reis
- * 	@data de criação - 01/04/2014
- * 	@arquivo  - lista.php
+ * 	@author - Luis Henrique Rodrigues
+ * 	@data de criação - 29/05/2014
+ * 	@arquivo  - busca.php
  */
  
 require_once("../../controller/unidade.controller.class.php");
@@ -31,66 +31,6 @@ if ($id > 0) {
 <!DOCTYPE html>
 <html>
   	<head>
-
-      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places&key=AIzaSyA5bgsvBQR3j7uUPNKJGjFWRtllRJ-1P9E"></script>     
-
-
-<script>
-// Note: This example requires that you consent to location sharing when
-// prompted by your browser. If you see a blank space instead of the map, this
-// is probably because you have denied permission for location sharing.
-
-var map;
-
-function initialize() {
-  var mapOptions = {
-    zoom: 6
-  };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-
-  // Try HTML5 geolocation
-  if(navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = new google.maps.LatLng(position.coords.latitude,
-                                       position.coords.longitude);
-      
-      var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        content: 'Location found using HTML5.'
-      });
-
-      map.setCenter(pos);
-    }, function() {
-      handleNoGeolocation(true);
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleNoGeolocation(false);
-  }
-}
-
-function handleNoGeolocation(errorFlag) {
-  if (errorFlag) {
-    var content = 'Error: The Geolocation service failed.';
-  } else {
-    var content = 'Error: Your browser doesn\'t support geolocation.';
-  }
-
-  var options = {
-    map: map,
-    position: new google.maps.LatLng(60, 105),
-    content: content
-  };
-
-  var infowindow = new google.maps.InfoWindow(options);
-  map.setCenter(options.position);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-
-    </script>
         <meta charset="utf-8">
         <title>Rango Map</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,11 +42,19 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <link href="../../css/geral.css" rel="stylesheet">
         <link href="../../css/validation.css" rel="stylesheet">
         <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
-        
+
+        <!-- Maps API Javascript -->
+        <script type="text/JavaScript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDe08WSo MkoPmQGZuZ_cF40idWzv01yJmc&sensor=TRUE"></script>
+ 
+        <!-- Arquivo de inicialização do mapa -->
+        <script src="../../js/mapa.js"></script>
+
+
+
 		  	</head>
 
 
-	<body>
+	<body onload="initialize();">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -177,9 +125,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
         </blockquote>
     </div>
   </div>
-</div>
-
-<div id="map_canvas"></div>
+</div>      
+       
+         
+        <div id="mapa" style="height: 500px; width: 1200px">
+        </div>
 
 <hr>
 
