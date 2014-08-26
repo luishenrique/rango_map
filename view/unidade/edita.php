@@ -73,6 +73,56 @@ if(isset($_GET["id"])){
 		<link rel="stylesheet" type="text/css" href="../../css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/book.css" />
 		-->
+		
+<!-- Maps API Javascript -->
+<script type="text/JavaScript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDe08WSo MkoPmQGZuZ_cF40idWzv01yJmc&sensor=TRUE"></script>
+
+		
+<script>
+var geocoder;
+var map;
+var infowindow = new google.maps.InfoWindow();
+var marker;
+function initialize() {
+  geocoder = new google.maps.Geocoder();
+  var latlng = new google.maps.LatLng(-23.475,-46.600);
+  var mapOptions = {
+    zoom: 8,
+    center: latlng,
+    mapTypeId: 'roadmap'
+  }
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+}
+
+function codeLatLng() {
+  var input = document.getElementById('latlng').value;
+  var latlngStr = input.split(',', 2);
+  var lat = parseFloat(latlngStr[0]);
+  var lng = parseFloat(latlngStr[1]);
+  var latlng = new google.maps.LatLng(lat, lng);
+  geocoder.geocode({'latLng': latlng}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      alert(results[1].formatted_address);
+      if (results[1]) {
+        map.setZoom(11);
+        marker = new google.maps.Marker({
+            position: latlng,
+            map: map
+        });
+        infowindow.setContent(results[1].formatted_address);
+        infowindow.open(map, marker);
+      } else {
+        alert('No results found');
+      }
+    } else {
+      alert('Geocoder failed due to: ' + status);
+    }
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
 
 </head>
 
@@ -112,6 +162,15 @@ if(isset($_GET["id"])){
   <?php
         }
    ?>
+   
+<!-- Mapa -->
+   
+    <div id="panel">
+      <input id="latlng" type="text" value="40.714224,-73.961452">
+      <input type="button" value="Reverse Geocode" onclick="codeLatLng()">
+    </div>
+    <div id="map-canvas" style="width:800px; height:450px;"></div>
+   
   <form class="form-horizontal" id="form" name="form" action="edita.php" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id" id="id" value="<?php echo ($unidade->getId() > 0 ) ? $unidade->getId() : ''; ?>">
     <div class="control-group">
@@ -263,9 +322,17 @@ if(isset($_GET["id"])){
 
             //alert("Latitude: "+results[0].geometry.location.lat());
             //alert("Longitude: "+results[0].geometry.location.lng());
+			
+			 map.setZoom(11);
+        marker = new google.maps.Marker({
+            position: results[0].geometry.location,
+            map: map
+        });
+        infowindow.setContent('teste');
+        infowindow.open(map, marker);
 
-            document.getElementById('latitude').value = results[0].geometry.location.lat();
-            document.getElementById('longitude').value = results[0].geometry.location.lng();
+           // document.getElementById('latitude').value = 
+            //document.getElementById('longitude').value = results[0].geometry.location.lng();
 
             
             
