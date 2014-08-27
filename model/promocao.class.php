@@ -46,7 +46,7 @@ class promocao {
     }
 		
 		public function getRestaurante_id(){
-			return $this>restaurante_id;
+			return $this>$restaurante_id;
 		}
   
   

@@ -18,7 +18,7 @@ class itens_cardapio {
 	private $calorias;
 	private $pessoas;
 	private $cardapio_id;
-	private $restaurante_id;
+	private $unidade_id;
 	
 
 	//Getters
@@ -52,7 +52,7 @@ class itens_cardapio {
 	}
 	
 	public function getRestaurante_id() {
-		return $this->restaurante_id;
+		return $this->unidade_id;
 	}
 	
 		
@@ -86,8 +86,8 @@ class itens_cardapio {
 		$this->cardapio_id = $cardapio_id;
 	}
 	
-	public function setRestaurante_id($restaurante_id) {
-		$this->restaurante_id = $restaurante_id;
+	public function setRestaurante_id($unidade_id) {
+		$this->unidade_id = $unidade_id;
 	}
 
 	

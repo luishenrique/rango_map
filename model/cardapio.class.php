@@ -2,9 +2,9 @@
 
 /*
  * 	Descrição do Arquivo
- * 	@autor - João Ricardo Gomes dos Reis
- * 	@data de criação - 01/04/2014
- * 	@arquivo - modelo.class.php
+ * 	@autor - Luis Henrique Rodrigues
+ * 	@data de criação - 27/08/2014
+ * 	@arquivo - cardapio.class.php
  */
 
 class cardapio {
@@ -12,8 +12,7 @@ class cardapio {
 	//Atributos
 
     private $id;
-    private $categoria;
-	private $restaurante_id;
+    private $categoria;	
     
 
 	//Getters
@@ -25,10 +24,7 @@ class cardapio {
     public function getCategoria() {
         return $this->categoria;
     }
-	   public function getRestaurante_id() {
-        return $this->restaurante_id;
-    }
-
+	 
 	//Setters
 
     public function setId($id) {
@@ -37,14 +33,9 @@ class cardapio {
 
     public function setCategoria($categoria) {
         $this->categoria = $categoria;
-   
-	}
+   	}	
 	
-	public function setRestaurante_id($restaurante_id){
-		$this->restaurante_id = $restaurante_id;	
-			
-		}
-		}
+	}
 		
 
 ?>

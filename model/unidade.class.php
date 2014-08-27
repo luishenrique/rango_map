@@ -15,8 +15,7 @@ class unidade {
     private $rua;
     private $numero;
     private $bairro;
-    private $cidade;
-    private $uf;
+    private $cidade_id;    
     private $telefone;
     private $restaurante_id;
     private $latitude;
@@ -40,12 +39,8 @@ class unidade {
     	return $this->bairro;
     }
 
-    public function getCidade(){
-    	return $this->cidade;
-    }
-
-    public function getUf(){
-    	return $this->uf;
+    public function getcidade_id(){
+    	return $this->cidade_id;
     }
 
     public function getTelefone(){
@@ -82,12 +77,8 @@ class unidade {
         $this->bairro = $bairro;
     }
 
-    public function setCidade($cidade) {
-        $this->cidade = $cidade;
-    }
-
-    public function setUf($uf) {
-        $this->uf = $uf;
+    public function setcidade_id($cidade_id) {
+        $this->cidade_id = $cidade_id;
     }
 
 	public function setTelefone($telefone) {
