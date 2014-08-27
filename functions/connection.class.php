@@ -4,11 +4,11 @@ class Connection{
 	private $connection;
 	
 	//Local DB
-	private $parameters = array("host"=>"localhost","user"=>"root","password"=>"senha","database"=>"rango_map");
+	private $parameters = array("host"=>"localhost","user"=>"root","password"=>"","database"=>"rango_map");
 
 	public function openConnection(){
 		
-		$this->connection = mysql_connect($this->parameters["host"], $this->parameters["user"], $this->parameters["password"]);
+		$this->connection = @mysql_connect($this->parameters["host"], $this->parameters["user"], $this->parameters["password"]);
 
 		if (!$this->connection) {
 			die ("Erro ao estabelecer conexão com a base de dados");

@@ -30,7 +30,17 @@ CREATE TABLE IF NOT EXISTS `cardapio` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `categoria` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Extraindo dados da tabela `cardapio`
+--
+
+INSERT INTO `cardapio` (`id`, `categoria`) VALUES
+(1, 'Bebidas'),
+(2, 'Pratos Principais'),
+(3, 'Bebidas'),
+(4, 'Pratos Principais');
 
 -- --------------------------------------------------------
 
@@ -42,7 +52,36 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `descricao` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Extraindo dados da tabela `categoria`
+--
+
+INSERT INTO `categoria` (`id`, `descricao`) VALUES
+(4, 'Comida Japonesa'),
+(5, 'Pizzaria');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cidade`
+--
+
+CREATE TABLE IF NOT EXISTS `cidade` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cidade` varchar(45) DEFAULT NULL,
+  `uf` varchar(2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `cidade`
+--
+
+INSERT INTO `cidade` (`id`, `cidade`, `uf`) VALUES
+(1, 'São João da Boa Vista', 'SP'),
+(2, 'Vargem Grande do Sul', 'SP');
 
 -- --------------------------------------------------------
 
@@ -76,9 +115,22 @@ CREATE TABLE IF NOT EXISTS `itens_cardapio` (
   `calorias` varchar(45) DEFAULT NULL,
   `pessoas` int(11) DEFAULT NULL,
   `cardapio_id` int(11) NOT NULL,
+  `unidade_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_itens_cardapio_cardapio1_idx` (`cardapio_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  KEY `fk_itens_cardapio_cardapio1_idx` (`cardapio_id`),
+  KEY `fk_itens_cardapio_unidade1_idx` (`unidade_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Extraindo dados da tabela `itens_cardapio`
+--
+
+INSERT INTO `itens_cardapio` (`id`, `nome`, `descricao`, `valor`, `calorias`, `pessoas`, `cardapio_id`, `unidade_id`) VALUES
+(1, 'Tradicional', 'Arroz, Feijão e Batata Frita', '30.00', '400', 2, 2, 1),
+(4, 'Pizza Calabresa', 'calabresa, mussarela...', '40.00', '1000', 4, 2, 3),
+(5, 'Arroz e Batata', 'arroz, batata...', '25.00', '4000', 2, 2, 2),
+(6, 'Pizza Mussarela', 'mussarela, ', '41.00', '1000', 4, 2, 3),
+(7, 'Coca-cola', 'coca 600ml', '5.00', '5000', 1, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -89,8 +141,8 @@ CREATE TABLE IF NOT EXISTS `itens_cardapio` (
 CREATE TABLE IF NOT EXISTS `pesquisa` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `data` datetime DEFAULT NULL,
-  `latitude` varchar(45) DEFAULT NULL,
-  `longitude` varchar(45) DEFAULT NULL,
+  `latitude` float DEFAULT NULL,
+  `longitude` float DEFAULT NULL,
   `id_usuario` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_pesquisa_usuario1_idx` (`id_usuario`)
@@ -109,7 +161,9 @@ CREATE TABLE IF NOT EXISTS `promocao` (
   `valor` decimal(12,2) DEFAULT NULL,
   `data_inicio` datetime DEFAULT NULL,
   `data_fim` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `restaurante_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_promocao_restaurante1_idx` (`restaurante_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -120,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `promocao` (
 
 CREATE TABLE IF NOT EXISTS `recomendacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `avaliacao` varchar(45) DEFAULT NULL,
+  `avaliacao` int(11) DEFAULT NULL,
   `comentario` varchar(100) DEFAULT NULL,
   `usuario_id` int(11) NOT NULL,
   `unidade_id` int(11) NOT NULL,
@@ -144,7 +198,15 @@ CREATE TABLE IF NOT EXISTS `restaurante` (
   `cnpj` varchar(45) DEFAULT NULL,
   `razao_social` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `restaurante`
+--
+
+INSERT INTO `restaurante` (`id`, `nome_fantasia`, `site`, `email`, `senha`, `cnpj`, `razao_social`) VALUES
+(1, 'Restaurante Japones', 'www.japones.com', 'japones@restaurante.com', '123', '0000000000000000', 'Restaurante - ME'),
+(2, 'Pizzaria Boa Massa', 'www.pizzaria.com', 'pizza@pizza.com', '123', '000000000000000000', 'Pizza - ME');
 
 -- --------------------------------------------------------
 
@@ -157,27 +219,24 @@ CREATE TABLE IF NOT EXISTS `unidade` (
   `rua` varchar(45) DEFAULT NULL,
   `numero` varchar(7) DEFAULT NULL,
   `bairro` varchar(45) DEFAULT NULL,
-  `cidade` varchar(45) DEFAULT NULL,
-  `uf` varchar(2) DEFAULT NULL,
   `telefone` varchar(45) DEFAULT NULL,
-  `id_restaurante` int(11) NOT NULL,
+  `restaurante_id` int(11) NOT NULL,
+  `latitude` float DEFAULT NULL,
+  `longitude` float DEFAULT NULL,
+  `cidade_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_unidade_restaurante_idx` (`id_restaurante`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
+  KEY `fk_unidade_restaurante_idx` (`restaurante_id`),
+  KEY `fk_unidade_cidade1_idx` (`cidade_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Estrutura da tabela `unidade_cardapio`
+-- Extraindo dados da tabela `unidade`
 --
 
-CREATE TABLE IF NOT EXISTS `unidade_cardapio` (
-  `unidade_id` int(11) NOT NULL,
-  `cardapio_id` int(11) NOT NULL,
-  PRIMARY KEY (`unidade_id`,`cardapio_id`),
-  KEY `fk_unidade_has_cardapio_cardapio1_idx` (`cardapio_id`),
-  KEY `fk_unidade_has_cardapio_unidade1_idx` (`unidade_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `unidade` (`id`, `rua`, `numero`, `bairro`, `telefone`, `restaurante_id`, `latitude`, `longitude`, `cidade_id`) VALUES
+(1, 'Rua Dois', '12', 'Jardim', '19 0000-0000', 1, 999.333, 222.222, 1),
+(2, 'Rua Tres', '2232', 'Jardim 2', '19 0000-0000', 1, 0.333, 999.222, 2),
+(3, 'Rua Quatro', '32', 'Jardim Brasil', '19 0000 0000', 2, 222.333, 222.331, 1);
 
 -- --------------------------------------------------------
 
@@ -192,6 +251,15 @@ CREATE TABLE IF NOT EXISTS `unidade_categoria` (
   KEY `fk_unidade_has_categoria_categoria1_idx` (`categoria_id`),
   KEY `fk_unidade_has_categoria_unidade1_idx` (`unidade_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `unidade_categoria`
+--
+
+INSERT INTO `unidade_categoria` (`unidade_id`, `categoria_id`) VALUES
+(1, 4),
+(2, 4),
+(3, 5);
 
 -- --------------------------------------------------------
 
@@ -235,7 +303,8 @@ ALTER TABLE `horario`
 -- Restrições para a tabela `itens_cardapio`
 --
 ALTER TABLE `itens_cardapio`
-  ADD CONSTRAINT `fk_itens_cardapio_cardapio1` FOREIGN KEY (`cardapio_id`) REFERENCES `cardapio` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_itens_cardapio_cardapio1` FOREIGN KEY (`cardapio_id`) REFERENCES `cardapio` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_itens_cardapio_unidade1` FOREIGN KEY (`unidade_id`) REFERENCES `unidade` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Restrições para a tabela `pesquisa`
@@ -244,38 +313,38 @@ ALTER TABLE `pesquisa`
   ADD CONSTRAINT `fk_pesquisa_usuario1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
+-- Restrições para a tabela `promocao`
+--
+ALTER TABLE `promocao`
+  ADD CONSTRAINT `fk_promocao_restaurante1` FOREIGN KEY (`restaurante_id`) REFERENCES `restaurante` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Restrições para a tabela `recomendacao`
 --
 ALTER TABLE `recomendacao`
-  ADD CONSTRAINT `fk_recomendacao_usuario1` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_recomendacao_unidade1` FOREIGN KEY (`unidade_id`) REFERENCES `unidade` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_recomendacao_unidade1` FOREIGN KEY (`unidade_id`) REFERENCES `unidade` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_recomendacao_usuario1` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Restrições para a tabela `unidade`
 --
 ALTER TABLE `unidade`
-  ADD CONSTRAINT `fk_unidade_restaurante` FOREIGN KEY (`id_restaurante`) REFERENCES `restaurante` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Restrições para a tabela `unidade_cardapio`
---
-ALTER TABLE `unidade_cardapio`
-  ADD CONSTRAINT `fk_unidade_has_cardapio_unidade1` FOREIGN KEY (`unidade_id`) REFERENCES `unidade` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_unidade_has_cardapio_cardapio1` FOREIGN KEY (`cardapio_id`) REFERENCES `cardapio` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_unidade_cidade1` FOREIGN KEY (`cidade_id`) REFERENCES `cidade` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_unidade_restaurante` FOREIGN KEY (`restaurante_id`) REFERENCES `restaurante` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Restrições para a tabela `unidade_categoria`
 --
 ALTER TABLE `unidade_categoria`
-  ADD CONSTRAINT `fk_unidade_has_categoria_unidade1` FOREIGN KEY (`unidade_id`) REFERENCES `unidade` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_unidade_has_categoria_categoria1` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_unidade_has_categoria_categoria1` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_unidade_has_categoria_unidade1` FOREIGN KEY (`unidade_id`) REFERENCES `unidade` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Restrições para a tabela `unidade_promocao`
 --
 ALTER TABLE `unidade_promocao`
-  ADD CONSTRAINT `fk_unidade_has_promocao_unidade1` FOREIGN KEY (`unidade_id`) REFERENCES `unidade` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_unidade_has_promocao_promocao1` FOREIGN KEY (`promocao_id`) REFERENCES `promocao` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_unidade_has_promocao_promocao1` FOREIGN KEY (`promocao_id`) REFERENCES `promocao` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_unidade_has_promocao_unidade1` FOREIGN KEY (`unidade_id`) REFERENCES `unidade` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

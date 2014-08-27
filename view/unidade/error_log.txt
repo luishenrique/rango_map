@@ -90,3 +90,75 @@
 [10-May-2014 18:40:21 UTC] PHP Notice:  Use of undefined constant d - assumed 'd' in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 54
 [13-May-2014 00:21:17 UTC] PHP Notice:  Undefined index: id in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 19
 [13-May-2014 00:21:20 UTC] PHP Notice:  Undefined index: id in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 19
+[27-Aug-2014 01:56:09 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 19
+[27-Aug-2014 01:56:09 Europe/Berlin] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 11
+[27-Aug-2014 01:56:09 Europe/Berlin] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 11
+[27-Aug-2014 01:56:14 Europe/Berlin] PHP Notice:  Undefined index: restauranteid in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 178
+[27-Aug-2014 01:56:58 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 19
+[27-Aug-2014 01:56:58 Europe/Berlin] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 11
+[27-Aug-2014 01:56:58 Europe/Berlin] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 11
+[27-Aug-2014 01:58:00 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 19
+[27-Aug-2014 01:58:00 Europe/Berlin] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 11
+[27-Aug-2014 01:58:00 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 01:58:00 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 01:58:00 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 01:58:00 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 01:58:00 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 01:58:00 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 01:58:00 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 100
+[27-Aug-2014 01:58:12 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 19
+[27-Aug-2014 01:58:12 Europe/Berlin] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 11
+[27-Aug-2014 01:58:12 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 01:58:12 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 01:58:12 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 01:58:12 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 01:58:12 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 01:58:12 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 01:58:12 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 100
+[27-Aug-2014 01:58:39 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 19
+[27-Aug-2014 01:58:39 Europe/Berlin] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 11
+[27-Aug-2014 01:58:39 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 01:58:39 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 01:58:39 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 01:58:39 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 01:58:39 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 01:58:39 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 01:58:39 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 100
+[27-Aug-2014 01:58:44 Europe/Berlin] PHP Notice:  Undefined index: restauranteid in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 178
+[27-Aug-2014 01:58:52 Europe/Berlin] PHP Notice:  Undefined index: restauranteid in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 178
+[27-Aug-2014 01:59:21 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 19
+[27-Aug-2014 01:59:21 Europe/Berlin] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 11
+[27-Aug-2014 01:59:21 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 01:59:21 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 01:59:21 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 01:59:21 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 01:59:21 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 01:59:21 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 01:59:21 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 100
+[27-Aug-2014 01:59:50 Europe/Berlin] PHP Notice:  Undefined index: restauranteid in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 178
+[27-Aug-2014 01:59:58 Europe/Berlin] PHP Notice:  Undefined index: restauranteid in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 178
+[27-Aug-2014 02:00:05 Europe/Berlin] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 11
+[27-Aug-2014 02:00:05 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 02:00:05 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 02:00:05 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 02:00:05 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 02:00:05 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 02:00:05 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 02:02:42 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 19
+[27-Aug-2014 02:02:42 Europe/Berlin] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 11
+[27-Aug-2014 02:02:42 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 02:02:42 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 02:02:42 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 02:02:42 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 02:02:42 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 02:02:42 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 02:02:42 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 100
+[27-Aug-2014 02:02:43 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 19
+[27-Aug-2014 02:02:43 Europe/Berlin] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 11
+[27-Aug-2014 02:02:43 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 02:02:43 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 02:02:43 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 02:02:43 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 02:02:43 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[27-Aug-2014 02:02:43 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[27-Aug-2014 02:02:43 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 100
