@@ -15,9 +15,15 @@ error_reporting(E_ALL);
 require_once("../../controller/unidade.controller.class.php");
 require_once("../../model/unidade.class.php");
 
+require_once("../../controller/cidade.controller.class.php");
+require_once("../../model/cidade.class.php");
+
 $unidade	= new UnidadeController;
 $registros 	= $unidade->listObjectsGroup($_GET['id']);
 $tamanho	= mysql_num_rows($registros);
+
+$cidadeController = new CidadeController;
+
 
 
 ?>
@@ -31,7 +37,8 @@ $tamanho	= mysql_num_rows($registros);
         <table class="table table-hover">
 			<thead>
             	<tr>
-                    <th>Código</th>
+
+            		<th>Código</th>
                     <th style="text-align:center">Rua</th>
                     <th style="text-align:center">Número</th>
                     <th style="text-align:center">Bairro</th>
@@ -50,7 +57,8 @@ $tamanho	= mysql_num_rows($registros);
             
 				<?php
                 	while($reg = mysql_fetch_array($registros)){
-                        
+                    $cidade = $cidadeController->load($reg["cidade_id"], "id");
+
 				?>
             
             	<tr>
@@ -58,8 +66,8 @@ $tamanho	= mysql_num_rows($registros);
                     <td style="text-align:center"><?php echo $reg["rua"]; ?></td>
                     <td style="text-align:center"><?php echo $reg["numero"]; ?></td>
                     <td style="text-align:center"><?php echo $reg["bairro"]; ?></td>
-                    <td style="text-align:center"><?php echo $reg["cidade"]; ?></td>
-                    <td style="text-align:center"><?php echo $reg["uf"]; ?></td>
+                    <td style="text-align:center"><?php echo $cidade["cidade"]; ?></td>
+                    <td style="text-align:center"><?php echo $cidade["uf"]; ?></td>
                     <td style="text-align:center"><?php echo $reg["telefone"]; ?></td>
                     <td style="text-align:center"><a id="btn_B_<?php echo $reg['id']; ?>" class="btn btn-small" type="button" title="+" 
                         onClick="mostraConteudo('<?php echo $reg['id']; ?>', 'B', 'cardapio', '<?php echo $reg["id"]; ?>')"><i class="icon-th-list"></i></a></td>                    
