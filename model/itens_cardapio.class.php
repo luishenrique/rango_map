@@ -51,7 +51,7 @@ class itens_cardapio {
 		return $this->cardapio_id;
 	}
 	
-	public function getRestaurante_id() {
+	public function getUnidade_id() {
 		return $this->unidade_id;
 	}
 	
@@ -86,7 +86,7 @@ class itens_cardapio {
 		$this->cardapio_id = $cardapio_id;
 	}
 	
-	public function setRestaurante_id($unidade_id) {
+	public function setUnidade_id($unidade_id) {
 		$this->unidade_id = $unidade_id;
 	}
 

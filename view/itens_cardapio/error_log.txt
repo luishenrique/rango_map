@@ -37,3 +37,4 @@
 [29-Aug-2014 02:18:51 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 114
 [29-Aug-2014 02:18:53 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 114
 [29-Aug-2014 02:38:59 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 115
+[29-Aug-2014 02:44:51 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 115
