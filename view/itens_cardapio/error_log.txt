@@ -22,3 +22,18 @@
 [30-Apr-2014 01:35:12 UTC] PHP Parse error:  syntax error, unexpected ';', expecting T_FUNCTION in D:\Servidor\htdocs\rango_map\model\unidade_cardapio.class.php on line 37
 [30-Apr-2014 01:35:47 UTC] PHP Parse error:  syntax error, unexpected ';', expecting T_FUNCTION in D:\Servidor\htdocs\rango_map\model\unidade_cardapio.class.php on line 37
 [30-Apr-2014 01:36:24 UTC] PHP Parse error:  syntax error, unexpected ';', expecting T_FUNCTION in D:\Servidor\htdocs\rango_map\model\unidade_cardapio.class.php on line 38
+[29-Aug-2014 02:04:02 Europe/Berlin] PHP Fatal error:  Class 'ItensCardapio' not found in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 21
+[29-Aug-2014 02:09:43 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getCardapioid() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 114
+[29-Aug-2014 02:09:46 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getCardapioid() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 114
+[29-Aug-2014 02:14:37 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 116
+[29-Aug-2014 02:14:39 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 116
+[29-Aug-2014 02:15:44 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 116
+[29-Aug-2014 02:16:59 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 116
+[29-Aug-2014 02:17:01 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 116
+[29-Aug-2014 02:17:10 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 116
+[29-Aug-2014 02:18:45 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 114
+[29-Aug-2014 02:18:45 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 114
+[29-Aug-2014 02:18:46 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 114
+[29-Aug-2014 02:18:51 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 114
+[29-Aug-2014 02:18:53 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 114
+[29-Aug-2014 02:38:59 Europe/Berlin] PHP Fatal error:  Call to undefined method itens_cardapio::getUnidade_id() in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 115

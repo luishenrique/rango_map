@@ -10,7 +10,7 @@
 //Inclui a classe genérica CRUD
 require_once("../../functions/crud.class.php");
 
-class Itens_cardapioController extends Crud {
+class ItensCardapioController extends Crud {
 
 	//Método construtor
 
