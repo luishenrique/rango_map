@@ -226,3 +226,6 @@
 [29-Aug-2014 01:46:14 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 70
 [29-Aug-2014 01:46:14 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 69
 [29-Aug-2014 01:46:14 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 70
+[29-Aug-2014 02:51:53 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 22
+[29-Aug-2014 02:52:09 Europe/Berlin] PHP Notice:  Undefined index: restauranteid in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 178
+[29-Aug-2014 02:52:09 Europe/Berlin] PHP Fatal error:  Call to undefined method unidade::getUf() in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 213
