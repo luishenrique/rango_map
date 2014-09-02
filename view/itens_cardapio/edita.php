@@ -42,6 +42,13 @@ if(isset($_POST['submit'])) {
 	header('Location: lista.php');
 }
 
+if(isset($_GET["cardapio_id"])){
+  $itens_cardapio->setCardapioid($_GET['cardapio_id']);
+}
+
+if(isset($_GET["unidade_id"])){
+  $itens_cardapio->setUnidadeid($_GET["unidade_id"]);
+}
 
 if(isset($_GET["id"])){
 	$itens_cardapio = $controller->loadObject($_GET["id"], 'id');
