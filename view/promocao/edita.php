@@ -213,17 +213,3 @@ element
 
 </body>
 </html>
-
-    Status
-    API
-    Training
-    Shop
-    Blog
-    About
-
-    © 2014 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Contact
-

@@ -7,18 +7,18 @@ error_reporting(E_ALL);
 
 /*
  * 	categoria do Arquivo
- * 	@author - João Ricardo Gomes dos Reis
- * 	@data de criação - 08/04/2014
+ * 	@author - Luis Henrique Rodrigues
+* 	@data de criação - 04/09/2014
  * 	@arquivo  - lista.php
  */
  
 //require_once("../../controller/cardapio.controller.class.php");
-require_once("../../controller/unidade_cardapio.controller.class.php");
-
+require_once("../../controller/itens_cardapio.controller.class.php");
+require_once("../../model/itens_cardapio.class.php");
 include_once("../../functions/functions.class.php");
 
-$cardapio 	= new UnidadeCardapio;
-$registros 	= $cardapio->lista($_GET['unidade']);
+$itens 	= new ItensCardapioController;
+$registros 	= $itens->listObjectsGroup($_GET['cardapio_id'], $_GET['unidade_id']);
 
 $functions	= new Functions;
 
@@ -45,7 +45,11 @@ $id = ( isset($_GET['id']) ) ? $_GET['id'] : 0;
 			<thead>
             	<tr>
                     <th>Código</th>
-                    <th>Categoria</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Calorias</th>
+                    <th>Pessoas</th>
                     <th><i class="icon-edit"></i></th>
                     
                 </tr>
@@ -58,8 +62,13 @@ $id = ( isset($_GET['id']) ) ? $_GET['id'] : 0;
             
             	<tr>
                     <td><?php echo $reg["id"]; ?></td>
-                    <td><?php echo $reg["categoria"]; ?></td>
-                    <td><label class="checkbox"><input type="checkbox" <?php if($_GET["unidade"]==$reg['unidade_id']) { echo "checked=\"checked\"";}?> onclick="editaUnidadeCardapio(this, '<?php echo $_GET["unidade"]; ?>' ,'<?php echo $reg["id"]; ?>')"></label></td>
+                    <td><?php echo $reg["nome"]; ?></td>
+                    <td><?php echo $reg["descricao"]; ?></td>
+                    <td><?php echo $reg["valor"]; ?></td>
+                    <td><?php echo $reg["calorias"]; ?></td>
+                    <td><?php echo $reg["pessoas"]; ?></td>
+
+                    <td style="text-align:center"><a class="btn btn-small" type="button" onClick="return confirm('Deseja excluir mesmo')" href="../itens_cardapio/lista.php?id=<?php echo $reg["id"]; ?>"><i class="icon-remove"></i></a></td>
                     
                 </tr>
             
@@ -86,7 +95,7 @@ $id = ( isset($_GET['id']) ) ? $_GET['id'] : 0;
         
         <div class="control-group">
             <div class="controls">
-              <a href="../cardapio/edita.php?restauranteid=<?php echo $_GET['id']; ?>" class="btn btn btn-medium">Cadastrar um novo item no Cardápio</a>
+              <a href="../itens_cardapio/edita.php?cardapio_id=<?php echo $_GET['cardapio_id']; ?>&unidade_id=<?php echo $_GET['unidade_id']; ?>" class="btn btn btn-medium">Cadastrar um novo item no Cardápio</a>
             </div>
         </div>
 
