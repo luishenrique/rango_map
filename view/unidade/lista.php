@@ -19,16 +19,19 @@ require_once("../../controller/cidade.controller.class.php");
 require_once("../../model/cidade.class.php");
 
 $unidade	= new UnidadeController;
-$registros 	= $unidade->listObjectsGroup($_GET['id']);
+$registros 	= $unidade->listObjectsGroup($_GET['restaurante_id']);
 $tamanho	= mysql_num_rows($registros);
 
 $cidadeController = new CidadeController;
 
+$id = ( isset($_GET['id']) ) ? $_GET['id'] : 0;
 
+if ($id > 0) {
+    $load = $unidade->remove($id, 'id');
+    header('Location: lista.php?acao=3&tipo=1');
+}
 
-?>
-
-
+?>  
 
 		<?php
         if($tamanho>0){
@@ -76,7 +79,7 @@ $cidadeController = new CidadeController;
                     <td style="text-align:center"><a id="btn_C_<?php echo $reg['id']; ?>" class="btn btn-small" type="button" title="+" 
                         onClick="mostraConteudo('<?php echo $reg['id']; ?>', 'C', 'categoria', '<?php echo $reg["id"]; ?>')"><i class="icon-tag"></i></a></td>
                     <td style="text-align:center"><a class="btn btn-small" type="button" href="../unidade/edita.php?id=<?php echo $reg['id']; ?>"><i class="icon-edit"></i></a></td>
-                    <td style="text-align:center"><a class="btn btn-small" type="button" onClick="return confirm('Deseja excluir mesmo')" href="../unidade/lista.php?id=<?php echo $reg["id"]; ?>"><i class="icon-remove"></i></a></td>
+                    <td style="text-align:center"><a class="btn btn-small" type="button" onClick="return confirm('Deseja excluir mesmo')" href="../unidade/lista.php?id=<?php echo $reg["id"]; ?>&restaurante_id=<?php echo $reg["restaurante_id"]; ?>"><i class="icon-remove"></i></a></td>
                 </tr>
 
                 <tr><td colspan="12" id="conteudo_B_<?php echo $reg['id']; ?>" style="height: 0px; display:none; border:0px none; background-color:#CCC;"></td></tr>

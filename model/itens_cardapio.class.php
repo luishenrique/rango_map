@@ -47,11 +47,11 @@ class itens_cardapio {
 		return $this->pessoas;
 	}
 	
-	public function getCardapio_id() {
+	public function getCardapioId() {
 		return $this->cardapio_id;
 	}
 	
-	public function getUnidade_id() {
+	public function getUnidadeId() {
 		return $this->unidade_id;
 	}
 	
@@ -82,11 +82,11 @@ class itens_cardapio {
 		$this->pessoas = $pessoas;
 	}
 	
-	public function setCardapio_id($cardapio_id) {
+	public function setCardapioId($cardapio_id) {
 		$this->cardapio_id = $cardapio_id;
 	}
 	
-	public function setUnidade_id($unidade_id) {
+	public function setUnidadeId($unidade_id) {
 		$this->unidade_id = $unidade_id;
 	}
 

@@ -229,3 +229,18 @@
 [29-Aug-2014 02:51:53 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 22
 [29-Aug-2014 02:52:09 Europe/Berlin] PHP Notice:  Undefined index: restauranteid in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 178
 [29-Aug-2014 02:52:09 Europe/Berlin] PHP Fatal error:  Call to undefined method unidade::getUf() in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 213
+[05-Sep-2014 01:56:00 Europe/Berlin] PHP Notice:  Undefined variable: usuario in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 30
+[05-Sep-2014 01:56:00 Europe/Berlin] PHP Fatal error:  Call to a member function remove() on a non-object in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 30
+[05-Sep-2014 01:57:45 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 114
+[05-Sep-2014 01:57:51 Europe/Berlin] PHP Notice:  Undefined index: id_restaurante in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 22
+[05-Sep-2014 01:58:30 Europe/Berlin] PHP Notice:  Undefined index: id_restaurante in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 22
+[05-Sep-2014 01:58:33 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 114
+[05-Sep-2014 01:58:35 Europe/Berlin] PHP Notice:  Undefined index: id_restaurante in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 22
+[05-Sep-2014 02:04:04 Europe/Berlin] PHP Notice:  Undefined index: restaurante_id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 22
+[05-Sep-2014 02:05:23 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 111
+[05-Sep-2014 02:05:34 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 111
+[05-Sep-2014 02:05:48 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 111
+[05-Sep-2014 02:06:11 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 111
+[05-Sep-2014 02:06:12 Europe/Berlin] PHP Fatal error:  Call to undefined method unidade::getCidade() in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 204
+[05-Sep-2014 02:07:08 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 111
+[05-Sep-2014 03:01:43 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 111

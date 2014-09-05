@@ -30,24 +30,24 @@ if(isset($_POST['submit'])) {
 	$itens_cardapio->setValor($_POST['valor']);
 	$itens_cardapio->setCalorias($_POST['calorias']);
 	$itens_cardapio->setPessoas($_POST['pessoas']);
-	$itens_cardapio->setCardapioid($_POST['cardapio_id']);
-	$itens_cardapio->setUnidadeid($_POST['unidade_id']);
+	$itens_cardapio->setCardapioId($_POST['cardapio_id']);
+	$itens_cardapio->setUnidadeId($_POST['unidade_id']);
 
 
-	if($cardapio->getId() > 0){
+	if($itens_cardapio->getId() > 0){
 		$controller->update($itens_cardapio, 'id');
 	}else{
 		$controller->save($itens_cardapio, 'id');
 	}
-	header('Location: lista.php');
+	header("Location: lista.php?cardapio_id=" . $itens_cardapio->getCardapioId() ."&unidade_id=" . $itens_cardapio->getUnidadeId());
 }
 
 if(isset($_GET["cardapio_id"])){
-  $itens_cardapio->setCardapioid($_GET['cardapio_id']);
+  $itens_cardapio->setCardapioId($_GET['cardapio_id']);
 }
 
 if(isset($_GET["unidade_id"])){
-  $itens_cardapio->setUnidadeid($_GET["unidade_id"]);
+  $itens_cardapio->setUnidadeId($_GET["unidade_id"]);
 }
 
 if(isset($_GET["id"])){
@@ -118,8 +118,8 @@ if(isset($_GET["id"])){
   <form class="form-horizontal" id="contact-form" action="edita.php" method="post" enctype="multipart/form-data">
   
   	<input type="hidden" name="id" id="id" value="<?php echo ($itens_cardapio->getId() > 0 ) ? $itens_cardapio->getId() : ''; ?>">
-  	<input type="hidden" name="cardapio_id" id="cardapio_id" value="<?php echo ($itens_cardapio->getCardapio_id() > 0 ) ? $itens_cardapio->getCardapio_id() : ''; ?>">
-    <input type="hidden" name="unidade_id" id="unidade_id" value="<?php echo ($itens_cardapio->getUnidade_id() > 0 ) ? $itens_cardapio->getUnidade_id() : ''; ?>">
+  	<input type="hidden" name="cardapio_id" id="cardapio_id" value="<?php echo ($itens_cardapio->getCardapioId() > 0 ) ? $itens_cardapio->getCardapioId() : ''; ?>">
+    <input type="hidden" name="unidade_id" id="unidade_id" value="<?php echo ($itens_cardapio->getUnidadeId() > 0 ) ? $itens_cardapio->getUnidadeId() : ''; ?>">
 
     <div class="control-group">
       <label class="control-label" for="categoria">Nome</label>
