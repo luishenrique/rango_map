@@ -1,2 +1,21 @@
 [20-May-2014 23:43:26 UTC] PHP Notice:  Undefined variable: unidade in D:\Servidor\htdocs\rango_map\view\cardapio\edita.php on line 112
 [20-May-2014 23:43:26 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\rango_map\view\cardapio\edita.php on line 112
+[05-Sep-2014 02:15:08 Europe/Berlin] PHP Fatal error:  Class 'Cardapio' not found in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 19
+[05-Sep-2014 02:16:28 Europe/Berlin] PHP Fatal error:  Class 'cardapio' not found in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 19
+[05-Sep-2014 02:16:29 Europe/Berlin] PHP Fatal error:  Class 'cardapio' not found in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 19
+[05-Sep-2014 02:19:23 Europe/Berlin] PHP Fatal error:  Call to undefined method CardapioController::lista() in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 21
+[05-Sep-2014 02:53:32 Europe/Berlin] PHP Fatal error:  Call to undefined method CardapioController::lista() in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 21
+[05-Sep-2014 02:53:34 Europe/Berlin] PHP Fatal error:  Call to undefined method CardapioController::lista() in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 21
+[05-Sep-2014 02:53:51 Europe/Berlin] PHP Fatal error:  Call to undefined method CardapioController::lista() in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 21
+[05-Sep-2014 02:55:38 Europe/Berlin] PHP Notice:  Undefined index: categoria in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 59
+[05-Sep-2014 02:55:38 Europe/Berlin] PHP Notice:  Undefined index: categoria_id in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 59
+[05-Sep-2014 02:55:38 Europe/Berlin] PHP Notice:  Undefined index: categoria in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 60
+[05-Sep-2014 02:55:38 Europe/Berlin] PHP Notice:  Undefined index: categoria in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 59
+[05-Sep-2014 02:55:38 Europe/Berlin] PHP Notice:  Undefined index: categoria_id in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 59
+[05-Sep-2014 02:55:38 Europe/Berlin] PHP Notice:  Undefined index: categoria in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 60
+[05-Sep-2014 02:55:38 Europe/Berlin] PHP Notice:  Undefined index: categoria in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 59
+[05-Sep-2014 02:55:38 Europe/Berlin] PHP Notice:  Undefined index: categoria_id in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 59
+[05-Sep-2014 02:55:38 Europe/Berlin] PHP Notice:  Undefined index: categoria in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 60
+[05-Sep-2014 02:55:38 Europe/Berlin] PHP Notice:  Undefined index: categoria in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 59
+[05-Sep-2014 02:55:38 Europe/Berlin] PHP Notice:  Undefined index: categoria_id in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 59
+[05-Sep-2014 02:55:38 Europe/Berlin] PHP Notice:  Undefined index: categoria in C:\xampp\htdocs\rango_map\view\cardapio\lista.php on line 60

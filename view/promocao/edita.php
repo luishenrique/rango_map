@@ -1,3 +1,4 @@
+﻿
 <?php
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
@@ -212,17 +213,3 @@ element
 
 </body>
 </html>
-
-    Status
-    API
-    Training
-    Shop
-    Blog
-    About
-
-    © 2014 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Contact
-

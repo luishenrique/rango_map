@@ -86,7 +86,10 @@
 [05-Sep-2014 03:14:53 Europe/Berlin] PHP Fatal error:  Call to a member function getId() on a non-object in C:\xampp\htdocs\rango_map\view\itens_cardapio\edita.php on line 37
 [05-Sep-2014 03:16:26 Europe/Berlin] PHP Notice:  Undefined index: cardapio_id in C:\xampp\htdocs\rango_map\view\itens_cardapio\lista.php on line 21
 [05-Sep-2014 03:16:26 Europe/Berlin] PHP Notice:  Undefined index: unidade_id in C:\xampp\htdocs\rango_map\view\itens_cardapio\lista.php on line 21
+<<<<<<< HEAD
 [12-Sep-2014 01:30:45 Europe/Berlin] PHP Notice:  Undefined index: cardapio_id in C:\xampp\htdocs\rango_map\view\itens_cardapio\lista.php on line 21
 [12-Sep-2014 01:30:45 Europe/Berlin] PHP Notice:  Undefined index: unidade_id in C:\xampp\htdocs\rango_map\view\itens_cardapio\lista.php on line 21
 [12-Sep-2014 01:31:02 Europe/Berlin] PHP Notice:  Undefined index: cardapio_id in C:\xampp\htdocs\rango_map\view\itens_cardapio\lista.php on line 21
 [12-Sep-2014 01:31:13 Europe/Berlin] PHP Notice:  Undefined index: cardapio_id in C:\xampp\htdocs\rango_map\view\itens_cardapio\lista.php on line 21
+=======
+>>>>>>> 6383f396eb809fbfc4dda2ddabcb8e9e9af18c64

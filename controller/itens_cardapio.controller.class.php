@@ -10,7 +10,7 @@
 //Inclui a classe genérica CRUD
 require_once("../../functions/crud.class.php");
 
-class Itens_cardapioController extends Crud {
+class ItensCardapioController extends Crud {
 
 	//Método construtor
 
@@ -19,9 +19,10 @@ class Itens_cardapioController extends Crud {
 		//Passa como parametro a tabela
         parent::__construct("itens_cardapio");
     }
-    
-   
-    
+
+    public function listObjectsGroup($cardapio_id, $unidade_id){
+		return $this->execute_query("SELECT * FROM itens_cardapio WHERE cardapio_id = " . $cardapio_id . " AND unidade_id = " . $unidade_id .";");
+	}
 }
 
 ?>

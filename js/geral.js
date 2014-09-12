@@ -135,7 +135,7 @@ function carregaUnidades(codigo){
 	document.getElementById('conteudo_A_'+codigo).style.display = "";
 	document.getElementById('conteudo_A_'+codigo).innerHTML = "Aguarde, pesquisando...!!!";	
 	
-	dadosDoFormulario = "id="+escape(codigo);
+	dadosDoFormulario = "restaurante_id="+escape(codigo);
 	xmlhttp.open("POST", "../unidade/lista.php?"+dadosDoFormulario, true);
 	xmlhttp.setRequestHeader('Content-Type','text/html');
 	xmlhttp.setRequestHeader('encoding','utf-8');
@@ -178,7 +178,48 @@ function carregaCardapios(codigo, unidade){
 	document.getElementById('conteudo_B_'+codigo).innerHTML = "Aguarde, pesquisando...!!!";	
 	
 	dadosDoFormulario = "id="+escape(codigo)+"&unidade="+escape(unidade);
-	xmlhttp.open("POST", "../unidade_cardapio/lista.php?"+dadosDoFormulario, true);
+	xmlhttp.open("POST", "../itens_cadapio/lista.php?"+dadosDoFormulario, true);
+	xmlhttp.setRequestHeader('Content-Type','text/html');
+	xmlhttp.setRequestHeader('encoding','utf-8');
+	xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xmlhttp.setRequestHeader('Content-length', dadosDoFormulario.lenght );
+	xmlhttp.send(dadosDoFormulario);
+	xmlhttp.onreadystatechange=function() {
+
+		/*
+		Verifica o estado do sistema
+		0: Requisição não inicializada
+		1: Conexão estabelecida com o servidor
+		2: Requisição recebida
+		3: Processando requisição 
+		4: Requisição finalizada e resposta lida
+		*/
+
+        if (xmlhttp.readyState==4){
+			//Recebe o código de retorno (100 a 500)
+			if (xmlhttp.status == 200){
+				//Resposta da Requisição
+				var aResposta = (xmlhttp.responseText);
+				//Insere a resposta da requisição dentro da tag com o ID selecionado 	
+				document.getElementById('conteudo_B_'+codigo).innerHTML = aResposta;	
+			}else{
+				//Erro na resposta da requisição
+				document.getElementById('conteudo_B_'+codigo).innerHTML = "Sua requisição não retornou um resultado válido.\nErro: "+xmlhttp.status;
+			}
+        }else{
+			//Carregando resposta da requisição
+			//alert("Carregando conteúdo");
+		}
+    }
+}
+
+function carregaItensCardapio(cardapio, unidade){
+
+	document.getElementById('conteudo_B_'+codigo).style.display = "";
+	document.getElementById('conteudo_B_'+codigo).innerHTML = "Aguarde, pesquisando...!!!";	
+	
+	dadosDoFormulario = "cardapio_id="+escape(codigo)+"&unidade_id="+escape(unidade);
+	xmlhttp.open("POST", "../itens_cadapio/lista.php?"+dadosDoFormulario, true);
 	xmlhttp.setRequestHeader('Content-Type','text/html');
 	xmlhttp.setRequestHeader('encoding','utf-8');
 	xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');

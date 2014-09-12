@@ -168,3 +168,82 @@
 [27-Aug-2014 02:15:18 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
 [27-Aug-2014 02:15:18 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
 [27-Aug-2014 02:15:18 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+<<<<<<< HEAD
+=======
+[29-Aug-2014 01:22:38 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:22:38 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:22:38 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:22:38 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:22:38 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:22:38 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:22:45 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:22:45 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:22:45 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:22:45 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:22:45 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:22:45 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:17 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:17 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:17 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:17 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:17 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:17 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:22 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:22 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:22 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:22 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:22 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:22 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:26 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:26 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:26 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:26 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:26 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:26 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:31 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:31 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:31 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:31 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:31 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:31 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:34 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:34 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:34 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:34 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:23:34 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:23:34 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:36:29 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:36:29 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:36:29 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:36:29 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:36:32 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 61
+[29-Aug-2014 01:36:32 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 62
+[29-Aug-2014 01:44:14 Europe/Berlin] PHP Warning:  Missing argument 2 for Crud::load(), called in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 60 and defined in C:\xampp\htdocs\rango_map\functions\crud.class.php on line 149
+[29-Aug-2014 01:44:14 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 69
+[29-Aug-2014 01:44:14 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 70
+[29-Aug-2014 01:44:14 Europe/Berlin] PHP Warning:  Missing argument 2 for Crud::load(), called in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 60 and defined in C:\xampp\htdocs\rango_map\functions\crud.class.php on line 149
+[29-Aug-2014 01:44:14 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 69
+[29-Aug-2014 01:44:14 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 70
+[29-Aug-2014 01:46:14 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 69
+[29-Aug-2014 01:46:14 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 70
+[29-Aug-2014 01:46:14 Europe/Berlin] PHP Notice:  Undefined index: cidade in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 69
+[29-Aug-2014 01:46:14 Europe/Berlin] PHP Notice:  Undefined index: uf in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 70
+[29-Aug-2014 02:51:53 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 22
+[29-Aug-2014 02:52:09 Europe/Berlin] PHP Notice:  Undefined index: restauranteid in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 178
+[29-Aug-2014 02:52:09 Europe/Berlin] PHP Fatal error:  Call to undefined method unidade::getUf() in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 213
+[05-Sep-2014 01:56:00 Europe/Berlin] PHP Notice:  Undefined variable: usuario in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 30
+[05-Sep-2014 01:56:00 Europe/Berlin] PHP Fatal error:  Call to a member function remove() on a non-object in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 30
+[05-Sep-2014 01:57:45 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 114
+[05-Sep-2014 01:57:51 Europe/Berlin] PHP Notice:  Undefined index: id_restaurante in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 22
+[05-Sep-2014 01:58:30 Europe/Berlin] PHP Notice:  Undefined index: id_restaurante in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 22
+[05-Sep-2014 01:58:33 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 114
+[05-Sep-2014 01:58:35 Europe/Berlin] PHP Notice:  Undefined index: id_restaurante in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 22
+[05-Sep-2014 02:04:04 Europe/Berlin] PHP Notice:  Undefined index: restaurante_id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 22
+[05-Sep-2014 02:05:23 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 111
+[05-Sep-2014 02:05:34 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 111
+[05-Sep-2014 02:05:48 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 111
+[05-Sep-2014 02:06:11 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 111
+[05-Sep-2014 02:06:12 Europe/Berlin] PHP Fatal error:  Call to undefined method unidade::getCidade() in C:\xampp\htdocs\rango_map\view\unidade\edita.php on line 204
+[05-Sep-2014 02:07:08 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 111
+[05-Sep-2014 03:01:43 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\rango_map\view\unidade\lista.php on line 111
+>>>>>>> 6383f396eb809fbfc4dda2ddabcb8e9e9af18c64

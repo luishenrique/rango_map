@@ -19,6 +19,13 @@ class CardapioController extends Crud {
 		//Passa como parâmetro a tabela
         parent::__construct("cardapio");
     }
+
+public function lista(){
+    	return $this->execute_query("SELECT * FROM cardapio");
+    }
+
+
+
 }
 
 ?>
