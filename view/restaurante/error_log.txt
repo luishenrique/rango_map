@@ -54,3 +54,5 @@
 [27-Aug-2014 02:10:59 Europe/Berlin] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, object given in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 23
 [27-Aug-2014 02:10:59 Europe/Berlin] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, object given in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 23
 [27-Aug-2014 02:11:04 Europe/Berlin] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\xampp\htdocs\rango_map\functions\connection.class.php on line 11
+[15-Sep-2014 23:34:48 UTC] PHP Notice:  Undefined variable: registros in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 137
+[18-Sep-2014 23:04:59 UTC] PHP Notice:  Undefined variable: registros in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 137

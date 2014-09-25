@@ -4,7 +4,7 @@ class Connection{
 	private $connection;
 	
 	//Local DB
-	private $parameters = array("host"=>"localhost","user"=>"root","password"=>"","database"=>"rango_map");
+	private $parameters = array("host"=>"localhost","user"=>"root","password"=>"senha","database"=>"rango_map");
 
 	public function openConnection(){
 		
