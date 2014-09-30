@@ -94,3 +94,15 @@
 [29-Sep-2014 22:20:36 UTC] PHP Notice:  Undefined index: value in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 82
 [29-Sep-2014 22:20:41 UTC] PHP Notice:  Undefined index: search in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 82
 [29-Sep-2014 22:20:41 UTC] PHP Notice:  Undefined index: value in D:\Servidor\htdocs\rango_map\view\restaurante\busca.php on line 82
+[30-Sep-2014 16:51:29 UTC] PHP Notice:  Undefined index: search in C:\wamp\www\rango_map\view\restaurante\busca.php on line 82
+[30-Sep-2014 16:51:29 UTC] PHP Stack trace:
+[30-Sep-2014 16:51:29 UTC] PHP   1. {main}() C:\wamp\www\rango_map\view\restaurante\busca.php:0
+[30-Sep-2014 16:51:29 UTC] PHP Notice:  Undefined index: value in C:\wamp\www\rango_map\view\restaurante\busca.php on line 82
+[30-Sep-2014 16:51:29 UTC] PHP Stack trace:
+[30-Sep-2014 16:51:29 UTC] PHP   1. {main}() C:\wamp\www\rango_map\view\restaurante\busca.php:0
+[30-Sep-2014 16:52:46 UTC] PHP Notice:  Undefined index: search in C:\wamp\www\rango_map\view\restaurante\busca.php on line 82
+[30-Sep-2014 16:52:46 UTC] PHP Stack trace:
+[30-Sep-2014 16:52:46 UTC] PHP   1. {main}() C:\wamp\www\rango_map\view\restaurante\busca.php:0
+[30-Sep-2014 16:52:46 UTC] PHP Notice:  Undefined index: value in C:\wamp\www\rango_map\view\restaurante\busca.php on line 82
+[30-Sep-2014 16:52:46 UTC] PHP Stack trace:
+[30-Sep-2014 16:52:46 UTC] PHP   1. {main}() C:\wamp\www\rango_map\view\restaurante\busca.php:0

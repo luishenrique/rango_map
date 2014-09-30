@@ -94,7 +94,7 @@ $functions	= new Functions;
           
             contentString[i] =
               '<div id="content">'+
-                '<h3 id="firstHeading" class="firstHeading">'+arr[i].Restaurante+'</h3>'+
+                '<h3>'+arr[i].Restaurante+'</h3>'+
                 '<div id="bodyContent">'+
                 ' Categoria: '+ arr[i].Categoria +'<br>'+
                   ''+ arr[i].Telefone +'<br>'+
@@ -135,7 +135,7 @@ $functions	= new Functions;
             
 
             //Insere as informações na listagem
-            document.getElementById('unidades').innerHTML += "<div class='unidade "+ cor +"'><h3>"+arr[i].Restaurante+"</h3><p><b>"+ arr[i].Categoria + '</b><br>' +arr[i].Rua+ ', ' +arr[i].Numero+"<br>"+arr[i].Cidade+"<br>"+arr[i].Telefone+"<br><input type='button' class='btn btn-danger btn-small' value='Ver no mapa' onclick='mostraUnidade("+arr[i].Longitude+","+arr[i].Latitude+")'><a href='visualizar.php?id="+ arr[i].Id +"'><input type='button' class='btn btn-warning btn-small' value='Ver Restaurante'></a></p></div>";
+            document.getElementById('unidades').innerHTML += "<div class='unidade "+ cor +"'><h3>"+arr[i].Restaurante+"</h3><p><b>"+ arr[i].Categoria + '</b><br>' +arr[i].Rua+ ', ' +arr[i].Numero+"<br>"+arr[i].Cidade+"<br>"+arr[i].Telefone+"<br><br><input type='button' class='btn btn-danger btn-small' value='Ver no mapa' onclick='mostraUnidade("+arr[i].Longitude+","+arr[i].Latitude+")'><a href='visualizar.php?id="+ arr[i].Id +"'><input type='button' class='btn btn-warning btn-small' value='Ver Restaurante'></a></p></div>";
             
             if (cor === 'cor1'){
                 cor = 'cor2';
@@ -170,17 +170,23 @@ $functions	= new Functions;
               width: 100%;
               float: left !important;
               padding-top: 15px;
+              padding-bottom:15px;
             }
 
-            .unidade{
-              width: 25%;
+            .unidade{              
+              width: 22%;
               float: left !important;
-              padding: 10px;
-              -webkit-border-radius: 10px;
-              -moz-border-radius: 10px;
-              border-radius: 10px;
-              margin-right: 10px;
+              padding: 10px;              
+              border-radius: 10px;              
+              border-top: 5px solid;
+              border-bottom: 5px solid;
+              border-color: #8e3133;
+              margin: 5px;
 
+            }
+
+            h3{
+              color: #8e3133;
             }
 
             .cor1{
