@@ -39,7 +39,7 @@ class unidade {
     	return $this->bairro;
     }
 
-    public function getcidade_id(){
+    public function getCidadeId(){
     	return $this->cidade_id;
     }
 
@@ -77,7 +77,7 @@ class unidade {
         $this->bairro = $bairro;
     }
 
-    public function setcidade_id($cidade_id) {
+    public function setCidadeId($cidade_id) {
         $this->cidade_id = $cidade_id;
     }
 

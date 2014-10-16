@@ -254,3 +254,5 @@
 [25-Sep-2014 16:00:17 UTC] PHP Notice:  Undefined index: restaurante_id in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 22
 [25-Sep-2014 16:20:46 UTC] PHP Notice:  Undefined index: restaurante_id in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 22
 [25-Sep-2014 16:20:50 UTC] PHP Notice:  Undefined index: restaurante_id in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 22
+[11-Oct-2014 16:04:42 UTC] PHP Notice:  Undefined index: id in D:\Servidor\htdocs\rango_map\view\unidade\lista.php on line 111
+[11-Oct-2014 16:05:05 UTC] PHP Fatal error:  Call to undefined method unidade::getCidade() in D:\Servidor\htdocs\rango_map\view\unidade\edita.php on line 204

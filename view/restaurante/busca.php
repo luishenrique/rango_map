@@ -98,7 +98,7 @@ $functions	= new Functions;
                 '<div id="bodyContent">'+
                 ' Categoria: '+ arr[i].Categoria +'<br>'+
                   ''+ arr[i].Telefone +'<br>'+
-                  '<p><a href="http://pt.wikipedia.org?id='+i+'">Mais detalhes +</a></p>'+
+                  '<p><a href="visualizar.php?id='+arr[i].Id+'">Mais detalhes +</a></p>'+
                 '</div>'+
               '</div>';
           
@@ -166,7 +166,7 @@ $functions	= new Functions;
 
         <style>
 
-            #unidades{
+            #unidadeefs{
               width: 100%;
               float: left !important;
               padding-top: 15px;
